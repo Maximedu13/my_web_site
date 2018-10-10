@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Curriculum Vitae</title>
+	<link rel="stylesheet" type="text/css" href="CSS/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Indie+Flower|Fredericka+the+Great|EB+Garamond|Charmonman" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" href="/resources/demos/style.css">
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="JS/slides/jquery.flexslider.js"></script>
+</head>
+<body>
+	<header>
+		<div id=lang>
+			<ul>
+				<?php foreach($languages as $language): ?>
+					<li>
+						<a href="index.php?lang=<?= $language['parametre_url'] ?>">
+						<img src="IMG/<?= $language['Image']?>">
+						</a>
+					</li>
+					<h5>
+						<?php $explode = explode(' ', $language['Nom'], 5);
+						echo $explode[$number] ;?>
+					</h5>
+				<?php endforeach; ?>		
+			</ul>
+		</div>
+		<div id="presentation">
+			<div id="title">
+				<h1>Maxime J.</h1>
+				<p>Développeur/Intégrateur en réalisation d’applications web Junior</p>
+			</div>
+			<nav id="menu">
+				<ul>
+					<li>
+						<a href="#about"><?= $about ;?></a>
+					</li>
+					<li>
+						<a href="#competences"><?= $competences ;?></a>
+					</li>
+					<li>
+						<a href="#"><?= $portfolio ;?></a>
+					</li>
+					<li>
+						<a href="#"><?= $diplomas ;?></a>
+					</li>
+					<li>
+						<a href="#contact"><?= $contact ;?></a>
+					</li>
+					<br/><br/>
+					<?php foreach($informatics as $informatic): ?>
+					<li>
+						<a href="#informatic"><?= "#" .$informatic['Nom']?></a>
+					</li>
+					<?php endforeach; ?>
+					<br/><br/>
+					<?php foreach($languages as $language): ?>
+					<li>
+						<a href="#linguistic"><?= "<span>". "#" . "</span>" ;?>
+							<?php $explode = explode(' ', $language['Nom'], 5);
+							echo $explode[$number] ;?>
+						</a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div id="introduction">
+			<div id="introduction-me">
+				<!-- Place somewhere in the <body> of your page -->
+				<div class="flexslider carousel">
+				  <ul class="slides">
+				    <li>
+				      <img src="IMG/moi.png">
+				    </li>
+				    <li>
+				      <img src="IMG/moi.png">
+				    </li>
+				    <!-- items mirrored twice, total of 12 -->
+				  </ul>
+				</div>
+			</div>
+			<div id="introduction-l">
+				<div class="introduction-list">
+					<img src="IMG/1055686.svg">
+					<h4><?= $introduction1 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/174249.svg">
+					<h4><?= $introduction2 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/149059.svg">
+					<h4><?= $introduction3 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/616487.svg">
+					<h4><?= $introduction4 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/552456.svg">
+					<h4><?= $introduction5 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/321817.svg">
+					<h4><a href="mailto:maxime.j.pro@free.fr">maxime.j.pro@free.fr</a></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/201623.svg">
+					<h4><?= $introduction7 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/263381.svg">
+					<h4><?= $introduction8 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/178148.svg">
+					<h4><?= $introduction9 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/1137432.png">
+					<h4><?= $introduction10 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/1142886.svg">
+					<h4><?= $introduction11 ?></h4>
+				</div>
+				<div class="introduction-list">
+					<img src="IMG/861506.svg">
+					<h4><?= $introduction12 ?></h4>
+				</div>
+			</div>
+		</div>
+		<div id="competences">
+			<div id="informatic">
+				<div class="left">
+				    <div class="hex-row">
+				    	<?php foreach($tops as $top): ?>
+						<div class="hex" value="<?= $top['iD'] ?>">
+				        	<div class="top"></div>
+				        	<div class="middle"><img src="IMG/<?= $top['Image'] ?>"></div>
+				        	<div class="bottom"></div>
+				        </div>
+						<?php endforeach; ?>
+				    </div>
+				    <div class="hex-row even">
+				        <?php foreach($mids as $mid): ?>
+						<div class="hex" value="<?= $mid['iD'] ?>">
+				        	<div class="top"></div>
+				        	<div class="middle"><img src="IMG/<?= $mid['Image'] ?>"></div>
+				        	<div class="bottom"></div>
+				        </div>
+						<?php endforeach; ?>
+				    </div>
+				    <div class="hex-row">
+				        <?php foreach($bottoms as $bottom): ?>
+						<div class="hex" value="<?= $bottom['iD'] ?>">
+				        	<div class="top"></div>
+				        	<div class="middle"><img src="IMG/<?= $bottom['Image'] ?>"></div>
+				        	<div class="bottom"></div>
+				        </div>
+						<?php endforeach; ?>
+				    </div>
+				</div>
+				<div id="instructions-1">
+					<?= $instructions ;?>
+					<br/>
+					<ul class="arrow">
+						<?php for ($i=0; $i <4 ; $i++) { 
+							echo '<li></li>'; }
+						?>
+					</ul>
+				</div>
+				<div class="right">
+				<?php foreach($informatics as $informatic): ?>
+				    <div class="details" value="<?= $informatic['iD'] ?>">
+			    		<div class="details-title">
+			    			<h3><?= str_replace("_", " ", $informatic['Nom']) ;?></h3>
+			    		</div>
+			    		<div class="details-title">
+			    			<p>	
+					    		<?= "« " . $informatic['Details'] . " »" ;?>
+					    		<a href="<?= $informatic['source'] ;?>" target="_blank"><sup>[1]</sup></a>
+				    		</p>
+			    		</div>
+			    		<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?= $informatic['progress'] ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?= $informatic['progress'] ?>%">
+								<?= $informatic['progress'] ?> %
+							</div>
+			    		</div>
+				    </div>
+				<?php endforeach; ?>
+				</div>
+			</div>
+			<div id="linguistic">
+				<div class="left">
+				    <div class="hex-row">
+				    	<?php foreach($languagestops as $languagestop): ?>
+							<div class="hex" value="<?= $languagestop['iD'] ?>">
+					        	<div class="top"></div>
+					        	<div class="middle"><img src="IMG/<?= $languagestop['Image'] ?>"></div>
+					        	<div class="bottom"></div>
+					        </div>
+						<?php endforeach; ?>
+				    </div>
+				    <div class="hex-row even">
+				        <?php foreach($languagesbottoms as $languagesbottom): ?>
+							<div class="hex" value="<?= $languagesbottom['iD'] ?>">
+					        	<div class="top"></div>
+					        	<div class="middle"><img src="IMG/<?= $languagesbottom['Image'] ?>"></div>
+					        	<div class="bottom"></div>
+					        </div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+				<div id="instructions-2">
+					<?= $instructions ;?>
+					<br/>
+					<ul class="arrow">
+						<?php for ($i=0; $i <4 ; $i++) { 
+							echo '<li></li>'; }
+						?>
+					</ul>
+				</div>
+				<div class="right">
+					<?php foreach($languages as $language): ?>
+					    <div class="details" value="<?= $language['iD'] ?>">
+				    		<div class="details-title">
+				    			<h3><?= str_replace("_", " ", $language['Nom']) ;?></h3>
+				    		</div>
+				    		<div class="details-title">
+				    			<p>	
+					    			<?= "« " . $language['Details'] . " »" ;?>
+					    			<a href="<?= $language['source'] ;?>" target="_blank"><sup>[1]</sup></a>
+				    			</p>
+				    		</div>
+				    		<div class="progress">
+    								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?= $language['progress'] ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?= $language['progress'] ?>%">
+      								<?= $language['progress'] ?>%</div>
+			    			</div>
+					    </div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+		<div id="buttons">
+			<button value="realisations"></button>
+			<button value="pictures"></button>
+			<button value="others"></button>
+		</div>
+		<div id="realisations">
+			<?php foreach($realisations as $realisation): ?>
+				<a href=""><img src="IMG/<?= $realisation['Photo'] ?>"></a>
+			<?php endforeach; ?>
+		</div>
+		<div id="pictures">
+			<ul>
+				<?php foreach($voyages as $voyage): ?>
+					<img src="IMG/<?= $voyage['Image'] ?>">
+				<?php endforeach; ?>
+			</ul>
+		</div>
+		<div id="canvas">
+			<?php include "canvas-" . $lang . ".phtml"; ?>
+		</div>
+		<section class="cd-timeline js-cd-timeline">
+		<div class="cd-timeline__container">
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="IMG/1043718.svg" alt="Picture">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>PRÉPARATION AU DCL - ESPAGNOL</h2>
+					<img src="IMG/280px-CNED_Logo_2017_RGB_Baseline.png">
+					<p>Le diplôme de compétence en langue (DCL) est un diplôme national professionnel créé spécialement pour les adultes. Il répond aux besoins du monde économique. Son originalité : évaluer les compétences langagières dans une situation proche de la réalité de travail. En fonction de leur performance, les candidats obtiennent le diplôme avec la mention d'un des niveaux du Cadre européen commun de référence pour les langues (CECRL). Le CNED propose une formation complète en espagnol pour préparer l'examen de certification.</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+					<span class="cd-timeline__date">2018</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+			
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="IMG/1043718.svg" alt="Picture">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Title of section 2</h2>
+					<img src="IMG/2000px-UdemyLogo.svg.png">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+					<span class="cd-timeline__date">2018</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="img/cd-icon-picture.svg" alt="Picture">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Title of section 3</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+					<span class="cd-timeline__date">Jan 24</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Title of section 4</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+					<span class="cd-timeline__date">Feb 14</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Licence LLCER aire culturelle slave</h2>
+					<h5><a href="https://www.google.fr/maps/place/Inalco/@48.8271046,2.3738506,17z/data=!4m12!1m6!3m5!1s0x47e6723acd3b913f:0x597fb78edf2d647e!2sInalco!8m2!3d48.8271011!4d2.3760393!3m4!1s0x47e6723acd3b913f:0x597fb78edf2d647e!8m2!3d48.8271011!4d2.3760393" target="blank"><i class="fas fa-location-arrow"></i></a> INALCO, PARIS (75), FRANCE</h5>
+					<p>« Les licences de l'Inalco sont conformes à la nomenclature nationale des diplômes avec la mention Langues, littératures et civilisations étrangères et régionales (LLCER). La licence à l'Inalco s'obtient avec 180 crédits (ECTS), ce qui correspond à 3 ans d'études supérieures. Pour obtenir une licence, l'étudiant a droit à 5 inscriptions. Les enseignements de licence comportent des enseignements fondamentaux de langue, littérature, civilisation, des enseignements d'approfondissement (liés au parcours choisi), des enseignements transversaux généraux, disciplinaires ou areaux (liés à une discipline ou à l'aire géographique du parcours suivi) et des enseignements libres ou d'ouverture. »</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+					<span class="cd-timeline__date">Feb 18</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="img/201614.svg" alt="Movie">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Baccalauréat scientifique</h2>
+					<h5><a href="https://www.google.fr/maps/place/Lycee+Polyvalent+Charles+Baudelaire/@49.1014733,2.5022558,17z/data=!3m1!4b1!4m5!3m4!1s0x47e638c973e9b5b1:0xf4d732acc1fe6980!8m2!3d49.1014733!4d2.5044445" target="blank"><i class="fas fa-location-arrow"></i></a> LYCÉE CHARLES BAUDELAIRE, FOSSES (95), FRANCE</h5>
+					<p>« Le bac S s'adresse aux élèves motivés par les matières scientifiques (mathématiques, physique-chimie...), l'écologie et l'agronomie, l'informatique et les sciences du numérique.<sup>[7]»</sup>
+					</p>
+					<span class="cd-timeline__date">2011</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+		</div>
+		</section> <!-- cd-timeline -->
+		<div class="chat-box">
+			<button>X</button>
+		  <div class="open">
+		  	<img src="IMG/214e2e2c-3a98-46f6-9b61-50c57a0d8fca-fadb0362-e723-4ab1-868d-9e256437ef3e-v1.png">
+		  	<!-- ON PASSE LES VARIABLES PHP EN JQUERY -->
+		  	<script>
+		  	var chatbox1 = <?php echo json_encode($chatbox1); ?>;
+ 			var chatbox2 = <?php echo json_encode($chatbox2); ?>;
+			</script>
+		  	<h4><?= $chatbox1 ?></h4>
+		  <div class="box">
+		  </div>
+		  </div>
+		</div>
+		<div id="contact">
+			<?php include "contact-" . $lang . ".phtml"; ?>
+		</div>
+	</main>
+	<footer>
+		<div id="social">
+			<h4><?= $networks ;?></h4>
+			<div class="circle">
+				<?php foreach($social as $socials): ?>
+					<a href="<?= $socials['URL'] ?>" target="_blank"><?= $socials['Image'] ;?></a>
+				<?php endforeach; ?>
+				<i class="fab fa-snapchat-ghost"></i>
+			</div>
+		</div> 
+		<div id="downloads">
+			<a href="">Télécharger mon CV sous PDF</a>
+		</div>
+		<div id="dialog-message">
+		    <?= $snapchat ;?>
+		</div>
+	</footer>
+	<script src="JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<div id="title">
+	<h1>Maxime J.</h1>
+	<p>Développeur/intégrateur en réalisation d’applications web Junior (HTML,CSS,JavaScript,PHP,SQL,jQuery)</p>
+</div>
+<nav id="menu">
+	<ul>
+		<li>
+			<a href="#about">à propos</a>
+		</li>
+		<li>
+			<a href="#competences">compétences</a>
+		</li>
+		<li>
+			<a href="#">portfolio</a>
+		</li>
+		<li>
+			<a href="#">diplômes</a>
+		</li>
+		<li>
+			<a href="#contact">contact</a>
+		</li>
+		<br/><br/>
+		<?php foreach($informatics as $informatic): ?>
+		<li>
+			<a href="#informatic"><?= "#" .$informatic['Nom']?></a>
+		</li>
+		<?php endforeach; ?>
+		<br/><br/>
+		<?php foreach($languages as $language): ?>
+		<li>
+			<a href="#linguistic"><?= "<span>". "#" . "</span>" .$language['Nom']?></a>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+</nav>
