@@ -30,7 +30,7 @@
 						<?php $explode = explode(' ', $language['Nom'], 5);
 						echo $explode[$number] ;?>
 					</h5>
-				<?php endforeach; ?>		
+				<?php endforeach; ?>
 			</ul>
 		</div>
 		<div id="presentation">
@@ -176,7 +176,7 @@
 					<?= $instructions ;?>
 					<br/>
 					<ul class="arrow">
-						<?php for ($i=0; $i <4 ; $i++) { 
+						<?php for ($i=0; $i <4 ; $i++) {
 							echo '<li></li>'; }
 						?>
 					</ul>
@@ -188,7 +188,7 @@
 			    			<h3><?= str_replace("_", " ", $informatic['Nom']) ;?></h3>
 			    		</div>
 			    		<div class="details-title">
-			    			<p>	
+			    			<p>
 					    		<?= "« " . $informatic['Details'] . " »" ;?>
 					    		<a href="<?= $informatic['source'] ;?>" target="_blank"><sup>[1]</sup></a>
 				    		</p>
@@ -227,7 +227,7 @@
 					<?= $instructions ;?>
 					<br/>
 					<ul class="arrow">
-						<?php for ($i=0; $i <4 ; $i++) { 
+						<?php for ($i=0; $i <4 ; $i++) {
 							echo '<li></li>'; }
 						?>
 					</ul>
@@ -239,7 +239,7 @@
 				    			<h3><?= str_replace("_", " ", $language['Nom']) ;?></h3>
 				    		</div>
 				    		<div class="details-title">
-				    			<p>	
+				    			<p>
 					    			<?= "« " . $language['Details'] . " »" ;?>
 					    			<a href="<?= $language['source'] ;?>" target="_blank"><sup>[1]</sup></a>
 				    			</p>
@@ -288,7 +288,7 @@
 					<span class="cd-timeline__date">2018</span>
 				</div> <!-- cd-timeline__content -->
 			</div> <!-- cd-timeline__block -->
-			
+
 			<div class="cd-timeline__block js-cd-block">
 				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
 					<img src="IMG/1043718.svg" alt="Picture">
@@ -381,11 +381,11 @@
 			<h4><?= $networks ;?></h4>
 			<div class="circle">
 				<?php foreach($social as $socials): ?>
-					<a href="<?= $socials['URL'] ?>" target="_blank"><?= $socials['Image'] ;?></a>
+					<a href="<?= $socials['URL'] ?>" target="_blank" title="<?= $socials['Nom'] ?>";?><?= $socials['Image']?></a>
 				<?php endforeach; ?>
 				<i class="fab fa-snapchat-ghost"></i>
 			</div>
-		</div> 
+		</div>
 		<div id="downloads">
 			<a href="">Télécharger mon CV sous PDF</a>
 		</div>
