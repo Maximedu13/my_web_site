@@ -5,6 +5,26 @@
 	outline: none;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: inherit;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+:-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4); 
+}
 /* HEADER */
 
 
@@ -167,10 +187,8 @@ header #title h1{
 /* COMPETENCES */
 
 #competences{
-	margin: 0 0 5% 0;
   background-image: linear-gradient(to bottom, #fdfcfb 0%, #e2d1c3 20%, white 99%);
   padding-top: 2%;
-  padding-bottom: 2%;
 }
 
 
@@ -234,16 +252,25 @@ header #title h1{
 	vertical-align: top;
 }
 
+#informatic{
+  min-height: 450px;
+}
+
+#linguistic{
+  min-height: 300px;
+}
+
 #competences #informatic .left{
 	width: 60%;
 	margin-left: 5%;
   margin-top: 5%;
-  margin-bottom: 5%;
+  padding-bottom: 1%;
 }
 
 #competences #linguistic .left{
   width: 40%;
   margin-left: 5%;
+
 }
 
 #competences .right{
@@ -251,9 +278,13 @@ header #title h1{
 }
 
 #competences #informatic .right{
-     margin-top: 5%;
+  margin-top: 5%;
 
 }
+#competences #linguistic .right{
+
+}
+
 
 #competences #informatic .left, #instructions-1{
 	display: inline-block;
@@ -262,7 +293,7 @@ header #title h1{
 
 #competences #linguistic .left, #instructions-2{
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 
 }
 
@@ -281,7 +312,7 @@ header #title h1{
   font-family: Fredericka the Great;
   color: #800000;
   width: 25%;
-  margin-top: 5%;
+
 }
 
 
@@ -296,6 +327,10 @@ header #title h1{
   margin-right: 10%;
   animation: Test 1s infinite;
 }
+
+
+
+
 
 .arrow li:first-child{
   animation: Testone 4s infinite;
@@ -349,6 +384,11 @@ header #title h1{
 	background:inherit;
 	border: none;
 }
+
+#portfolio{
+  padding-top: 3%;
+}
+
 #portfolio #buttons{
 	text-align: center;
   margin: 2% 0 1% 0;

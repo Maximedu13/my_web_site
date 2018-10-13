@@ -68,15 +68,6 @@ $(document).ready(function(){
 		$( '.chat-box' ).hide();
 	});
 
-	$('.flexslider').flexslider({
-		    animation: "slide",
-		    animationLoop: false,
-		    itemWidth: 210,
-		    itemMargin: 5,
-		    minItems: 2,
-		    maxItems: 4
-		  });
-
 	$( 'footer .fa-snapchat-ghost' ).click(function(){
 		$( 'footer .fa-snapchat-ghost' ).click(function(){
 			$( "#dialog-message" ).dialog({
