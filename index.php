@@ -23,8 +23,6 @@
     	$contact = "contact";
 
 
-
-
         $introduction1 = "Développeur/intégrateur en réalisation d’applications web Junior";
         $introduction2 = "Quadrilingue";
         $introduction3 = "Cannes, France";
@@ -62,7 +60,7 @@
     	$diplomas = "diplomas";
     	$contact = "contact";
 
-        $introduction1 = "Junior web Developer & Integrator";
+        $introduction1 = "Junior web Developer/Integrator";
         $introduction2 = "Quadrilingual";
         $introduction3 = "Cannes, France";
         $introduction4 = "Currently taking a professional training course in Python.";
@@ -96,7 +94,7 @@
     	$contact = "contact";
 
     	$number = 2;
-        $introduction1 = "Junior Dezvoltator & Integrator Web";
+        $introduction1 = "Junior Dezvoltator/Integrator Web";
         $introduction2 = "Quadrilingv";
         $introduction3 = "Cannes, Franța";
         $introduction4 = "";
@@ -125,7 +123,7 @@
 
     case "es":
 
-    	$about = "Sobre MÍ";
+    	$about = "Sobre mí";
     	$competences = "competencias";
     	$portfolio = "portfolio";
     	$diplomas = "diplomas";
@@ -134,7 +132,7 @@
 
 
     	$number = 3;
-        $introduction1 = "Desarrollador & Integrador web Junior";
+        $introduction1 = "Desarrollador/Integrador web Junior";
         $introduction2 = "Cuatrilingüe";
         $introduction3 = "Cannes, Francia";
         $introduction4 = "Actualmente en Curso de Formación";
@@ -168,6 +166,7 @@
     	$contact = "kontakt";
 
     	$number = 4;
+
         $introduction1 = "Junior Webentwickler/Web Integrator";
         $introduction2 = "Viersprachig";
         $introduction3 = "Cannes, Frankreich";

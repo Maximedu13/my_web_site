@@ -36,7 +36,7 @@
 		<div id="presentation">
 			<div id="title">
 				<h1>Maxime J.</h1>
-				<p>Développeur/Intégrateur en réalisation d’applications web Junior</p>
+				<p><?= $introduction1 ;?></p>
 			</div>
 			<nav id="menu">
 				<ul>
@@ -238,7 +238,9 @@
 					<?php foreach($languages as $language): ?>
 					    <div class="details" value="<?= $language['iD'] ?>">
 				    		<div class="details-title">
-				    			<h3><?= str_replace("_", " ", $language['Nom']) ;?></h3>
+				    			<h3><?php $explode = explode(' ', $language['Nom'], 5);
+									echo $explode[$number] ;?>
+								</h3>
 				    		</div>
 				    		<div class="details-title">
 				    			<p>

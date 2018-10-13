@@ -110,8 +110,8 @@ header #title h1{
 /* ABOUT */
 
 #about {
-	background-color: #1cafd8;
-	height: 480px;
+  background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 50%, #fdfcfb 99%);
+	height: 500px;
 	text-align: center;
   padding-top: 2%;
 }
@@ -167,7 +167,10 @@ header #title h1{
 /* COMPETENCES */
 
 #competences{
-	margin: 5% 0 5% 0;
+	margin: 0 0 5% 0;
+  background-image: linear-gradient(to bottom, #fdfcfb 0%, #e2d1c3 20%, white 99%);
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 
@@ -757,24 +760,18 @@ footer #social .circle i{
 footer .fa-snapchat-ghost{
   cursor: pointer;
 }
+
 footer #downloads a{
 	text-decoration: none;
-	color: white;
+	border:1px solid #22adf5;
+  color: #22adf5;
 	text-align: center;
-	border: 1px solid white;
 	padding: 1% 2%;
 }
 
 footer #downloads {
 	margin-left:10%;
 }
-footer #downloads a:hover{
-	border:1px solid #22adf5;
-	color: #22adf5;
-}
-
-
-
 
 
 
