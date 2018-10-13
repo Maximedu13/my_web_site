@@ -162,9 +162,9 @@
 
 
     	$about = "Über mich";
-    	$competences = "KOMPETENZEN";
+    	$competences = "Kompetenzen";
     	$portfolio = "portfolio";
-    	$diplomas = "DIPLOME";
+    	$diplomas = "Diplome";
     	$contact = "kontakt";
 
     	$number = 4;
