@@ -125,8 +125,8 @@
 
     case "es":
 
-    	$about = "SOBRE MÍ";
-    	$competences = "COMPETENCIAS";
+    	$about = "Sobre MÍ";
+    	$competences = "competencias";
     	$portfolio = "portfolio";
     	$diplomas = "diplomas";
     	$contact = "contacto";
@@ -161,7 +161,7 @@
     case "de":
 
 
-    	$about = "ÜBER MICH";
+    	$about = "Über miche";
     	$competences = "KOMPETENZEN";
     	$portfolio = "portfolio";
     	$diplomas = "DIPLOME";

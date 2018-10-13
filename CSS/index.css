@@ -107,13 +107,16 @@ header #title h1{
 
 
 
-/* */
+/* ABOUT */
 
-#introduction {
+#about {
 	background-color: #1cafd8;
-	height: 370px;
+	height: 480px;
 	text-align: center;
-
+  padding-top: 2%;
+}
+#about h1{
+  margin-bottom: 2%;
 }
 
 #introduction-me {
@@ -161,16 +164,11 @@ header #title h1{
 
 
 
-
-
-
-
 /* COMPETENCES */
 
 #competences{
-	margin-bottom: 5%;
+	margin: 5% 0 5% 0;
 }
-
 
 
 .hex {
@@ -348,10 +346,11 @@ header #title h1{
 	background:inherit;
 	border: none;
 }
-#buttons{
+#portfolio #buttons{
 	text-align: center;
-  margin-bottom: 1%;
+  margin: 2% 0 1% 0;
 }
+
 #buttons button:first-child{
   background:url(../IMG/644459.svg);
   background-size: 70%;
@@ -386,9 +385,13 @@ header #title h1{
 
 /* MAIN */
 
-main{
-
+main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, main #contact h1{
+  text-align: center;
+  font-family: 'Charmonman', cursive;
+  text-transform: capitalize;
+  font-size: 3em;
 }
+
 
 /* DIPLOMES */
 
@@ -396,12 +399,6 @@ main{
   margin: 5% 5% 1% 5%;
 }
 
-#diplomas h1{
-  text-align: center;
-  font-family: 'Charmonman', cursive;
-  text-transform: capitalize;
-  font-size: 3em;
-}
 
 #diplomas .timeline {
 }
@@ -411,6 +408,7 @@ main{
   border-radius: 6px;
   width: 40%;
   box-shadow: 5px 5px; 
+
 }
 
 #diplomas .arrow-right {
@@ -491,6 +489,9 @@ main #pictures img:hover{
 
 /* STYLISATION DE LA PARTIE CONTACT */
 
+  #contact{
+    margin-top: 5%;
+  }
   #contact-fr{
     background-image: url(../IMG/antibes.png);
     background-repeat: no-repeat;
