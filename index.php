@@ -161,11 +161,11 @@
     case "de":
 
 
-    	$about = "Über miche";
+    	$about = "Über mich";
     	$competences = "KOMPETENZEN";
     	$portfolio = "portfolio";
     	$diplomas = "DIPLOME";
-    	$contact = "KONTAKT";
+    	$contact = "kontakt";
 
     	$number = 4;
         $introduction1 = "Junior Webentwickler/Web Integrator";
@@ -185,6 +185,8 @@
 
         $chatbox1 = "Eine Frage ?";
         $chatbox2 = "Este aici.";
+
+        $networks = "Folgt mir auf...";
 
         $instructions = "Faceţi clic pe miniatură pentru <br/> a afișa mai multe informații.";
         break;
