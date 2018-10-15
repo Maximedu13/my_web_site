@@ -252,6 +252,7 @@
 				<button value="realisations"></button>
 				<button value="pictures"></button>
 				<button value="others"></button>
+				<button value="works"></button>
 			</div>
 			<div id="realisations">
 				<?php foreach($realisations as $realisation): ?>
@@ -267,6 +268,16 @@
 			</div>
 			<div id="canvas">
 				<?php include "canvas-" . $lang . ".phtml"; ?>
+			</div>
+			<div id="works">
+				<?php foreach($works as $work): ?>
+					<a href="IMG/<?= $work['URL']?>" target="_blank">
+						<img src="IMG/<?= $work['Image'] ?>">
+						<legend><?php $explode = explode('.', $work['Nom'], 5);
+									echo $explode[$number] ;?>
+							</legend>
+					</a>
+				<?php endforeach; ?>
 			</div>
 		</div>
 		<div id="diplomas">
@@ -329,9 +340,6 @@
 				<?php endforeach; ?>
 				<i class="fab fa-snapchat-ghost"></i>
 			</div>
-		</div>
-		<div id="downloads">
-			<a href="">Télécharger mon CV sous PDF</a>
 		</div>
 		<div id="dialog-message">
 		    <?= $snapchat ;?>

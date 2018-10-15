@@ -135,8 +135,8 @@
         $introduction1 = "Desarrollador/Integrador web Junior";
         $introduction2 = "Cuatrilingüe";
         $introduction3 = "Cannes, Francia";
-        $introduction4 = "Actualmente en Curso de Formación";
-        $introduction5 = "";
+        $introduction4 = "Actualmente en Curso de Formación Desarrollador Python";
+        $introduction5 = "Actualmente en Curso de Formación Desarrollador iOS";
         $introduction6 = "";
         $introduction7 = "Más de 20 países visitados";
         $introduction8 = "Permiso de conducir";
@@ -378,7 +378,17 @@
 
 
 
+	$query = $pdo->prepare('
+	SELECT 
+		*
+	FROM 
+		works
+	');
 
+	// Exécution de la requête
+	$query->execute();
+
+	$works = $query->fetchAll();
 
 
 /*

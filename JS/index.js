@@ -42,18 +42,32 @@ $(document).ready(function(){
 	$( 'button[value=pictures]' ).click(function(){
 		$("#realisations").hide();
 		$("#canvas").hide();
+		$("#works").hide();
 		$("#pictures").show();
 	});
 	$( 'button[value=realisations]' ).click(function(){
 		$("#realisations").show();
 		$("#pictures").hide();
+		$("#works").hide();
 		$("#canvas").hide();
 	});
 	$( 'button[value=others]' ).click(function(){
 		$("#canvas").show();
 		$("#pictures").hide();
+		$("#works").hide();
 		$("#realisations").hide();
 	});
+
+	$( 'button[value=works]' ).click(function(){
+		$("#works").show();
+		$("#pictures").hide();
+		$("#realisations").hide();
+		$("#canvas").hide();
+	});
+
+    ('#contact #downloads select option[value=en]:selected'){
+        $('#contact #downloads-3').show();
+    }
 
 	$( '.open' ).mouseover(function(){
 		$(".open img").attr('src', 'IMG/096dffe0-3934-41db-842c-34c180d0615c-fadb0362-e723-4ab1-868d-9e256437ef3e-v1.png');
