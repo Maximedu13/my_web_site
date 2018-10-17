@@ -65,9 +65,7 @@ $(document).ready(function(){
 		$("#canvas").hide();
 	});
 
-    ('#contact #downloads select option[value=en]:selected'){
-        $('#contact #downloads-3').show();
-    }
+
 
 	$( '.open' ).mouseover(function(){
 		$(".open img").attr('src', 'IMG/096dffe0-3934-41db-842c-34c180d0615c-fadb0362-e723-4ab1-868d-9e256437ef3e-v1.png');

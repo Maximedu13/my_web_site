@@ -31,7 +31,7 @@
 header{
 	background: linear-gradient(rgba(0 ,55 ,0, 0.8), rgba(26,45,54, 0.7)),url(../IMG/code.png);
 	background-size: cover;
-	height: 620px;
+	height: 660px;
 	width: 100%;
 	color: white;
 }
@@ -584,7 +584,7 @@ main #pictures img:hover{
     background-repeat: no-repeat;
     background-position: right;
     background-size: 155%;
-    padding-bottom: 60%;
+    padding-bottom: 1%;
   }
 
   #contact-es{
@@ -592,7 +592,7 @@ main #pictures img:hover{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130%;
-    padding-bottom: 5%;
+    padding-bottom: 1%;
   }
 
   #contact-de{
@@ -600,7 +600,7 @@ main #pictures img:hover{
     background-repeat: no-repeat;
     background-position: center ;
     background-size: 135%;
-    padding-bottom: 60%;
+    padding-bottom: 1%;
   }
 
   #contact #form {
@@ -808,12 +808,33 @@ main #pictures img:hover{
 footer {
 	padding-bottom: 5%;
 }
+footer #clapperboard{
+  background-image: url("../IMG/img_434241.png");
+  background-size: 100%;
+  margin-left: 15%;
+  height: 230px;
+  width: 230px;
+}
+
+footer #clapperboard #credits{
+  margin-top: 50%;
+  list-style-type: none;
+  color: white;
+  text-align: center;
+  font-size: 50%;
+}
+
+footer #clapperboard, footer #social{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2%;
+}
 
 footer #social{
   height: 200px;
   text-align: center;
   width: 40%;
-  margin: 0 0 0 50%;
+  margin-left: 15%;
 
 }
 footer #social .circle{
@@ -859,6 +880,7 @@ footer #social .circle i{
 footer .fa-snapchat-ghost{
   cursor: pointer;
 }
+
 
 
 
