@@ -131,7 +131,7 @@ header #title h1{
 
 #about {
   background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 50%, #fdfcfb 99%);
-	height: 500px;
+	height: 520px;
 	text-align: center;
   padding-top: 2%;
 }
@@ -163,6 +163,7 @@ header #title h1{
 .introduction-list{
   width: 25%;
   margin-top: 1%;
+  padding-bottom: 2%;
 }
 
 .introduction-list a{
@@ -834,7 +835,7 @@ footer #social{
   height: 200px;
   text-align: center;
   width: 40%;
-  margin-left: 15%;
+  margin-left: 20%;
 
 }
 footer #social .circle{

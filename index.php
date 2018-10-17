@@ -34,6 +34,7 @@
         $snapchat = "<img src='IMG/monsnap.jpg'>";
         $networks = "Retrouvez-moi sur...";
         $instructions = "Cliquer sur une vignette pour <br/> afficher plus de détails.";
+        $credits = "Mentions légales";
         break;
 
     // ANGLAIS //
@@ -60,6 +61,7 @@
         $snapchat = "<img src='IMG/mysnap.jpg'>";
         $networks = "Find me on...";
         $instructions = "Click on a thumbnail to <br/> display more details.";
+        $credits = "Legal notices";
         break;
 
     // ROUMAIN //
@@ -86,6 +88,7 @@
         $chatbox2 = "Este aici.";
         $networks = "Mă găsiți și pe...";
         $instructions = "Faceţi clic pe miniatură pentru <br/> a afișa mai multe informații.";
+        $credits = "Mențiuni legale";
         break;
 
 
@@ -111,8 +114,9 @@
         $snapchat = "<img src='IMG/misnap.jpg'>";
         $chatbox1 = "¿Una pregunta?";
         $chatbox2 = "Está aquí.";
-        $networks = "Retrouvez-moi sur...";
+        $networks = "Encontrarme en...";
         $instructions = "Clica en las miniaturas para <br/> ver más detalles.";
+        $credits = "Menciones legales ";
         break;
 
     
@@ -126,19 +130,20 @@
         $introduction1 = "Junior Webentwickler/Web Integrator";
         $introduction2 = "Viersprachig";
         $introduction3 = "Cannes, Frankreich";
-        $introduction4 = "";
-        $introduction5 = "";
-        $introduction7 = "Mehr als";
+        $introduction4 = "Zukünftige Python Entwickler";
+        $introduction5 = "Zukünftige iOS Entwickler";
+        $introduction7 = "Mehr als 20 besuchten Ländern";
         $introduction8 = "Führerschein";
-        $introduction9 = "";
+        $introduction9 = "Fan von Strategiespielen";
         $introduction10 = "25 Jahre alt";
-        $introduction11 = "";
-        $introduction12 = "";
+        $introduction11 = "Master-Absolvent";
+        $introduction12 = "Immer auf der Suche nach neuen herausforderungen";
         $snapchat = "<img src='IMG/meusnap.jpg'>";
         $chatbox1 = "Eine Frage ?";
         $chatbox2 = "Este aici.";
         $networks = "Folgt mir auf...";
-        $instructions = "Faceţi clic pe miniatură pentru <br/> a afișa mai multe informații.";
+        $instructions = "Klicken Sie auf ein Bild um Details anzuzeigen.";
+        $credits = "Rechtlichen Hinweise";
         break;
 
 
