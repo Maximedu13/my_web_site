@@ -3,7 +3,7 @@
 <head>
 	<title>Curriculum Vitae</title>
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
-	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Indie+Flower|Fredericka+the+Great|EB+Garamond|Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Indie+Flower|Fredericka+the+Great|EB+Garamond|Charmonman|Crimson+Text" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -182,7 +182,7 @@
 			    		<div class="details-title">
 			    			<p>
 					    		<?= "« " . $informatic['Details'] . " »" ;?>
-					    		<a href="<?= $informatic['source'] ;?>" target="_blank"><sup>[1]</sup></a>
+					    		<a href="<?= $informatic['source'] ;?>" target="_blank"><sup>[réf.]</sup></a>
 				    		</p>
 			    		</div>
 			    		<div class="progress">
@@ -235,7 +235,7 @@
 				    		<div class="details-title">
 				    			<p>
 					    			<?= "« " . $language['Details'] . " »" ;?>
-					    			<a href="<?= $language['source'] ;?>" target="_blank"><sup>[1]</sup></a>
+					    			<a href="<?= $language['source'] ;?>" target="_blank"><sup>[réf.]</sup></a>
 				    			</p>
 				    		</div>
 				    		<div class="progress">
@@ -274,9 +274,11 @@
 				<?php foreach($works as $work): ?>
 					<a href="IMG/<?= $work['URL']?>" target="_blank">
 						<img src="IMG/<?= $work['Image'] ?>">
-						<legend><?php $explode = explode('.', $work['Nom'], 5);
-									echo $explode[$number] ;?>
-							</legend>
+						<legend>
+							<?php $explode = explode('.', $work['Nom'], 5);
+								echo $explode[$number]
+							;?>
+						</legend>
 					</a>
 				<?php endforeach; ?>
 			</div>
@@ -284,33 +286,41 @@
 		<div id="diplomas">
 			<h1><?= $diplomas ?></h1>
 			<div class="timeline">
+				<?php foreach($diplomasleft as $diplomaleft): ?>
 			  	<div class="diplomas-left">
 			  		<div class="arrow-right">
 			    	</div>
 				    <div class="content">
-					      <h2>2017</h2>
-					      <p>Le diplôme de compétence en langue (DCL) est un diplôme national professionnel créé spécialement pour les adultes. Il répond aux besoins du monde économique. Son originalité : évaluer les compétences langagières dans une situation proche de la réalité de travail. En fonction de leur performance, les candidats obtiennent le diplôme avec la mention d'un des niveaux du Cadre européen commun de référence pour les langues (CECRL). Le CNED propose une formation complète en espagnol pour préparer l'examen de certification.
-					      </p>
+					    <h2><?= $diplomaleft['Month']." ".$diplomaleft['Year'] ;?></h2>
+					    <h3><?= $diplomaleft['Title'] ;?></h3>
+					    <img src="IMG/<?= $diplomaleft['Image'] ;?>">
+					    <p><?= "« ".$diplomaleft['Description']. " »";?>
+					    <a href="<?= $diplomaleft['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
+					    </p>
 				    </div>
 			  	</div>
-			  	<div class="diplomas-right">
+			  	<?php endforeach; ?>
+			</div>
+			<div id="vertical-line">
+				<?php for ($i=0; $i < 7; $i++) {
+					echo '<div class="circle">'.'</div>';}
+				?>
+			</div>
+			<div class="timeline">
+				<?php foreach($diplomasright as $diplomaright): ?>
+				<div class="diplomas-right">
 			  		<div class="arrow-left">
 			    	</div>
 				    <div class="content">
-					      <h2>2017</h2>
-					      <p>Le diplôme de compétence en langue (DCL) est un diplôme national professionnel créé spécialement pour les adultes. Il répond aux besoins du monde économique. Son originalité : évaluer les compétences langagières dans une situation proche de la réalité de travail. En fonction de leur performance, les candidats obtiennent le diplôme avec la mention d'un des niveaux du Cadre européen commun de référence pour les langues (CECRL). Le CNED propose une formation complète en espagnol pour préparer l'examen de certification.
-					      </p>
+				    	<h2><?= $diplomaright['Month']." ".$diplomaright['Year'] ;?></h2>
+					    <h3><?= $diplomaright['Title'] ;?></h3>
+					    <img src="IMG/<?= $diplomaright['Image'] ;?>">
+					    <p><?= "« ".$diplomaright['Description']." »" ;?>
+					    <a href="<?= $diplomaright['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
+					    </p>
 				    </div>
 				</div>
-				<div class="diplomas-left">
-			  		<div class="arrow-right">
-			    	</div>
-				    <div class="content">
-					      <h2>2017</h2>
-					      <p>« Le bac S s'adresse aux élèves motivés par les matières scientifiques (mathématiques, physique-chimie...), l'écologie et l'agronomie, l'informatique et les sciences du numérique.[7]»
-					      </p>
-				    </div>
-			  	</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 		<div class="chat-box">

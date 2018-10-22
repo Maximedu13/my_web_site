@@ -471,27 +471,151 @@ main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, mai
   background-image: linear-gradient(to bottom, white 0%, #e6e9f0 10%, #eef1f5 50%, white 100%);
 }
 
-
-#diplomas .timeline {
+#diplomas #vertical-line{
+  width: 10px;
+  height: 2300px;
+  background-image: linear-gradient(to bottom, #e6e9f0 0%, #cf556c 10%, #ff8c7f 31%, #f99185 52%, #cf556c 78%, white 100%);
+  margin-left: 5%;
 }
 
-#diplomas .content {
-  background-color: red;
-  border-radius: 6px;
-  width: 40%;
-  box-shadow: 5px 5px; 
+
+
+#diplomas .timeline{
+  width: 45%;
+  text-align: center;
+}
+
+#diplomas .timeline p{
+  text-align: justify;
+  margin: 2%;
+  font-family: 'Crimson Text', serif;
+  padding-bottom: 2%;
+}
+
+#diplomas .timeline h3{
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  text-transform: capitalize;
+}
+
+#diplomas .timeline img{
+  height: 100px;
+  width: 30%;
+}
+
+
+#diplomas .timeline, #diplomas #vertical-line {
+  display: inline-block;
+  vertical-align: top;
 
 }
+
+
+#diplomas .content h2{
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+  padding: 1% 0 1% 0;
+  font-family: 'Fredericka the Great', cursive;
+  background-color: #ff4081;
+}
+
+
+
+
+#diplomas .diplomas-left .content {
+  background-color: white;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+}
+
+#diplomas .diplomas-right .content {
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  color: black;
+  background-color: white;
+}
+
+
+#diplomas .diplomas-left, #diplomas .diplomas-right{
+  margin-left: 10%;
+}
+
+#diplomas .circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 10px;
+  position: relative;
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+#diplomas .circle:hover{
+
+}
+
+#diplomas .circle:first-child{
+ margin-top: 150px;
+}
+
+#diplomas .circle:nth-child(2){
+ margin-top: 150px;
+}
+
+#diplomas .circle:nth-child(3){
+ margin-top: 310px;
+}
+
+#diplomas .circle:nth-child(4){
+ margin-top: 170px;
+}
+
+#diplomas .circle:nth-child(5){
+ margin-top: 190px;
+}
+
+#diplomas .circle:nth-child(6){
+ margin-top: 450px;
+}
+
+#diplomas .circle:last-child{
+ margin-top: 125px;
+}
+
+#diplomas .diplomas-right:first-child{
+  margin-top: 185px;
+  margin-bottom: 150px;
+}
+
+
+
+#diplomas h1{
+    margin-bottom: 5%;
+}
+
+
 
 #diplomas .arrow-right {
-  width: 0; 
-  height: 0; 
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid red;
+  width: 15%; 
+  height: 3px; 
+  background-color: red;
   position: relative;
-  top: 130px;
-  left: 40%;
+  top: 165px;
+  left: 100%;
+
+
+}
+
+#diplomas .arrow-left{
+  width: 10%;  
+  height: 3px; 
+  background-color: red;
+  position: relative;
+  top: 160px;
+  right: 10%;
 }
 
 
@@ -568,7 +692,7 @@ main #pictures img:hover{
     background-image: url(../IMG/antibes.png);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 115%;
+    background-size: 125%;
     padding-bottom: 1%;
   }
 
@@ -577,7 +701,7 @@ main #pictures img:hover{
     background-repeat: no-repeat;
     background-position: center left;
     background-size: 135%;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
   }
 
   #contact-ro{
@@ -808,6 +932,7 @@ main #pictures img:hover{
 
 footer {
 	padding-bottom: 5%;
+  background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%);
 }
 footer #clapperboard{
   background-image: url("../IMG/img_434241.png");
@@ -832,7 +957,6 @@ footer #clapperboard, footer #social{
 }
 
 footer #social{
-  height: 200px;
   text-align: center;
   width: 40%;
   margin-left: 20%;
@@ -856,7 +980,6 @@ footer #social .circle i:hover{
 
 footer #social .circle i{
   font-size: 20px;
-  margin-top: 20px;
   padding: 30px;
   border:1px solid #22adf5;
   color: #22adf5;

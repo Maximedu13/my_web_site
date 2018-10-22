@@ -16,7 +16,7 @@
     	$about = "à propos";
     	$competences = "compétences";
     	$portfolio = "portfolio";
-    	$diplomas = "diplômes";
+    	$diplomas = "diplômes et formations";
     	$contact = "contact";
         $introduction1 = "Développeur/intégrateur en réalisation d’applications web Junior";
         $introduction2 = "Quadrilingue";
@@ -43,7 +43,7 @@
     	$about = "about";
     	$competences = "competences";
     	$portfolio = "portfolio";
-    	$diplomas = "diplomas";
+    	$diplomas = "diplomas and professional trainings";
     	$contact = "contact";
         $introduction1 = "Junior web Developer/Integrator";
         $introduction2 = "Quadrilingual";
@@ -347,6 +347,39 @@
 	$works = $query->fetchAll();
 
 
+
+	$query = $pdo->prepare('
+	SELECT 
+		*
+	FROM 
+		diplomas
+	WHERE 
+		iD%2 = 1
+	ORDER BY
+		Year DESC
+	');
+
+	// Exécution de la requête
+	$query->execute();
+
+	$diplomasleft = $query->fetchAll();
+
+
+	$query = $pdo->prepare('
+	SELECT 
+		*
+	FROM 
+		diplomas
+	WHERE 
+		iD%2 = 0
+	ORDER BY
+		Year DESC
+	');
+
+	// Exécution de la requête
+	$query->execute();
+
+	$diplomasright = $query->fetchAll();
 /*
 
 	$query = $pdo->prepare('
