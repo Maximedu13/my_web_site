@@ -44,4 +44,24 @@
 			</div>
 		</form>
 	</div>
+	<div id="downloads">
+		<div id="downloads-1">
+			<img src="IMG/80449733-5883-4546-98ef-8c56880403de-d36908f7-654c-401e-b136-03c07f344c42-v1.png">
+			<h1><?= $downloadcv ;?></h1>
+		</div>
+		<div id="downloads-2">
+			<h1><?= $selectalanguage ;?></h1>
+			<br/>
+			<select>
+				<option disabled="disabled" selected="selected" value="0">-</option>
+				<?php foreach($languages as $language): ?>
+					<option value="<?= $language['parametre_url'] ?>"><?php $explode = explode(' ', $language['Nom'], 5);
+						echo $explode[$number] ;?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
+		<div id="downloads-3">
+			<h1>2. Télécharger</h1>
+		</div>
+	</div>
 </div>

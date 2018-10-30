@@ -324,7 +324,9 @@
 			</div>
 		</div>
 		<div class="chat-box">
-			<button>X</button>
+			<div class="buttons">
+				<button>X</button>
+			</div>
 		  	<div class="open">
 			  	<img src="IMG/214e2e2c-3a98-46f6-9b61-50c57a0d8fca-fadb0362-e723-4ab1-868d-9e256437ef3e-v1.png">
 			  	<!-- ON PASSE LES VARIABLES PHP EN JQUERY -->
@@ -334,30 +336,16 @@
 				</script>
 			  	<h4><?= $chatbox1 ?></h4>
 				<div class="box">
+					<?php include "form-" . $lang . ".phtml" ;?>
 				</div>
 		  	</div>
 		</div>
 		<div id="contact">
 			<h1><?= $contact ?></h1>
-			<?php include "contact-" . $lang . ".phtml"; ?>
+			<?php include "contact-" . $lang . ".phtml" ;?>
 		</div>
 	</main>
 	<footer>
-		<div id="clapperboard">
-			<ul id="credits">
-				<li><b><?= $credits ?></b></li>
-				<li>© 2018 Codeur et Directeur de la publication</li>
-				<li><i class="fas fa-user-circle"></i> Maxime Jacquette</li>
-				<li><i class="fas fa-envelope-open"></i> maxime.j.pro@free.fr</li>
-				<li><i class="fas fa-phone-volume"></i> +33 7 83 89 96 37</li>
-				<li><i class="fas fa-location-arrow"></i> 06400 Cannes</li>
-				<li>Mis en ligne par FREE</li>
-				<li>Siège Social de Free</li> 
-				<li>8 Rue de la Ville-l’Évêque</li>
-				<li>75008, Paris</li>
-				<li>01 73 50 20 00</li>
-			</ul>
-		</div>
 		<div id="social">
 			<h4><?= $networks ;?></h4>
 			<div class="circle">
@@ -370,6 +358,19 @@
 		<div id="dialog-message">
 		    <?= $snapchat ;?>
 		</div>
+		<ul id="credits">
+			<li><b><?= $credits ?></b></li>
+			<li>© 2018 Codeur et Directeur de la publication</li>
+			<li><i class="fas fa-user-circle"></i> Maxime Jacquette</li>
+			<li><i class="fas fa-envelope-open"></i> maxime.j.pro@free.fr</li>
+			<li><i class="fas fa-phone-volume"></i> +33 7 83 89 96 37</li>
+			<li><i class="fas fa-location-arrow"></i> 06400 Cannes</li>
+			<li>Mis en ligne par FREE</li>
+			<li>Siège Social de Free</li> 
+			<li>8 Rue de la Ville-l’Évêque</li>
+			<li>75008, Paris</li>
+			<li>01 73 50 20 00</li>
+		</ul>
 	</footer>
 	<script src="JS/index.js"></script>
 </body>

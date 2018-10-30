@@ -1,0 +1,24 @@
+body{
+	background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+	font-family: 'Alegreya', serif;
+	user-select: none;
+}
+.sendmessage{
+	text-align: center;
+}
+.sendmessage p{
+	width: 50%;
+	margin-left: 25%;
+	text-align: justify;
+}
+a img{
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+a{
+	text-decoration: none;
+	color: white;
+}

@@ -1,0 +1,20 @@
+<form method="POST" action="PHP/sendmessage.php?lang=fr">
+	<label for="motif">Quel est le motif de votre question ?</label><br/>
+       <select name="motif">
+       	   <option disabled="disabled" selected="selected">-</option>
+           <option value="Question_de_programmation_informatique_générale">Question de programmation informatique générale</option>
+           <option value="Question_de_linguistique_générale">Question de linguistique générale</option>
+           <option value="Question_sur_mes_compétences">Question sur mes compétences</option>
+           <option value="Question_sur_mon_parcours">Question sur mon parcours</option>
+           <option value="Question_sur_mes_diplômes">Question sur mes diplômes</option>
+           <option value="Recrutabilité">Recrutement/option>
+           <option value="En_savoir_plus_sur_moi">En savoir plus sur moi</option>
+           <option value="Autre">Autre</option>
+       </select>
+    <label for="email_1">Quel est votre e-mail ?</label></br>
+			<input type="email" name="email_1"/>
+    <label for="question">Votre question :</label><br/>
+    	<textarea name="question"></textarea>
+    <br/>
+    <button type="submit">Envoyer</button>
+</form>

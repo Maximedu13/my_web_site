@@ -570,19 +570,19 @@ main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, mai
 }
 
 #diplomas .circle:nth-child(4){
- margin-top: 170px;
+ margin-top: 152.5px;
 }
 
 #diplomas .circle:nth-child(5){
- margin-top: 190px;
+ margin-top: 205px;
 }
 
 #diplomas .circle:nth-child(6){
- margin-top: 450px;
+ margin-top: 435px;
 }
 
 #diplomas .circle:last-child{
- margin-top: 125px;
+ margin-top: 120px;
 }
 
 #diplomas .diplomas-right:first-child{
@@ -692,8 +692,8 @@ main #pictures img:hover{
     background-image: url(../IMG/antibes.png);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 125%;
-    padding-bottom: 1%;
+    padding-bottom: 4%;
+    background-size: 120%;
   }
 
   #contact-en{
@@ -752,7 +752,7 @@ main #pictures img:hover{
     text-align: center;
   }
 
-  #form, #contact #downloads{
+  #contact #form, #contact #downloads{
     display: inline-block;
     vertical-align: top;
   }
@@ -769,7 +769,7 @@ main #pictures img:hover{
     width: 30%;
   }
  
-  #form img {
+  #contact #form img {
     width: 25%;
     margin: 0 37.5%;
 
@@ -856,17 +856,17 @@ main #pictures img:hover{
     100% { opacity: 0; }
   }
 
-  input{
+  #contact input{
     height: 40px;
   }
 
-  textarea{
+  #contact textarea{
     height: 100px;
     /* empêche le redimensionnement des champs textarea dans le formulaire */
     resize: none;
   }
 
-  input,textarea {
+    #contact input,   #contact textarea {
     border-radius: 0px 5px 5px 0px;
     margin-bottom: 15px;
     width: 75%;
@@ -908,7 +908,7 @@ main #pictures img:hover{
   }
 
 
-  .buttons button{
+  #contact .buttons button{
     border: 1px solid #ddd;
       background: url(../IMG/network.jpeg);
       background-size: cover;
@@ -920,7 +920,7 @@ main #pictures img:hover{
       border-radius: 5px;
       outline: none;
   }
-  .buttons {
+  #contact .buttons {
     text-align: center;
     margin-bottom: 1%;
   }
@@ -931,76 +931,62 @@ main #pictures img:hover{
 
 
 footer {
-	padding-bottom: 5%;
-  background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%);
-}
-footer #clapperboard{
-  background-image: url("../IMG/img_434241.png");
-  background-size: 100%;
-  margin-left: 15%;
-  height: 230px;
-  width: 230px;
-}
-
-footer #clapperboard #credits{
-  margin-top: 50%;
-  list-style-type: none;
-  color: white;
-  text-align: center;
-  font-size: 50%;
-}
-
-footer #clapperboard, footer #social{
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 2%;
+ background-color: #333;
 }
 
 footer #social{
   text-align: center;
-  width: 40%;
-  margin-left: 20%;
+  float: right;
+  width: 50%;
+}
 
+footer #social h4{
+  color: white;
 }
 footer #social .circle{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background:rgba(255,255,255,0.7);
   list-style-type: none;
-  }
+}
 
-footer #social .circle h4{
-  color: black;
-}
-footer #social .circle i:hover{
-  border:1px solid #22adf5;
-  color: #22adf5;
-}
+
 
 footer #social .circle i{
   font-size: 20px;
   padding: 30px;
-  border:1px solid #22adf5;
-  color: #22adf5;
-
+  border:1px solid white;
 }
+
+
  footer #dialog-message{
   display: none;
   background-color: black;
-  color: white;
  }
 
 
- .ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, .foo, .ui-draggable, .ui-resizable {
+.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, .foo, .ui-draggable, .ui-resizable{
   background:black !important;
   color: white !important;
   text-align: center !important;
   border:none !important;
 }
 
+footer #credits{
+  width: 50%;
+  text-align: justify;
+  list-style-type: none;
+  color: white;
+  padding-left: 12.5%;
+}
+footer #credits li{
+}
 
-
+footer #social, footer #credits{
+  display: inline-block;
+  padding-top: 4%;
+  height: 300px;
+}
 footer .fa-snapchat-ghost{
   cursor: pointer;
 }
@@ -1016,11 +1002,13 @@ footer .fa-snapchat-ghost{
 }
 
 
-.chat-box button{
+.chat-box .buttons{
   float: right;
   background-color: inherit;
-  color: white;
+  color: black;
 }
+
+
 .box{
     transition: height .6s ease-out;
     width: 200px;
@@ -1028,10 +1016,35 @@ footer .fa-snapchat-ghost{
     background: white;
 
 }
+
+.box form label{
+   padding-top: 5px;
+}
+
+.box form select{
+  font-size: 7.5px;
+  border: 1px solid black;
+}
+
+
+.box form textarea{
+  resize: none;
+  font-family: Garamond;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.box form button[type=submit]{
+  background: #673AB7;
+  color: white;
+  padding: 2px;
+}
+
 .open:hover>.box{
-    height:250px;
+    height:260px;
     transition: height .6s ease-out;
-    text-align: left;
+    text-align: center;
+    color: black;
 }
 
 
@@ -1055,7 +1068,9 @@ footer .fa-snapchat-ghost{
   width: 75px;
 }
 
-
+.open form input[name=email_1], .open form textarea {
+  border: 1px solid black;
+}
 
 /* MEDIA QUERIES */
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curriculum Vitae</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/sendmessage.css">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+</head>
+<body>
+	<?php
+
+	$subject = "";
+    $question = "";
+    $from = "";
+    $headers = "";
+    
+    //Mon adresse mail
+    $to = "maxime.j.pro@free.fr";
+
+	if (isset($_POST['motif'])){
+		//ANTI FAILLE XSS
+		$subject = htmlspecialchars($_POST['motif']);
+	};
+
+	if (isset($_POST['question'])){
+		//ANTI FAILLE XSS
+		$question = htmlspecialchars($_POST['question']);
+		$question = wordwrap($question, 70, "\r\n");
+	};
+
+	if (isset($_POST['email_1'])){
+		//ANTI FAILLE XSS
+		$from = htmlspecialchars($_POST['email_1']);
+		$headers = "From:" . $from;
+		$headers .= "\r\n";
+	};
+
+	$lang = "fr";
+	if (isset($_GET['lang'])) {
+	$lang = $_GET["lang"];
+	}
+
+	switch ($lang) {
+	// FRANCAIS //
+    case "fr":
+        $chat_box_message_success = "Votre message a été envoyé.";
+        $chat_box_message_fail = "Le message n'a pu être envoyé car tous les champs sont requis.";
+        $home = "Accueil";
+        $youremail = "Votre mail :";
+        $yourquestion = "Votre question : ";
+
+        break;
+    // ANGLAIS //
+    case "en":
+ 
+        $chat_box_message_success = "Your message has been sent.";
+        $chat_box_message_fail = "The message hasn't been sent because all fields are required.";
+        $home = "Home";
+        $youremail = "Your email :";
+        $yourquestion = "Your question : ";
+
+        break;
+    // ROUMAIN //
+    case "ro":
+
+        $chat_box_message_success = "Mesajul dumneavoastră a fost trimis cu succes.";
+        $chat_box_message_fail = "Mesajul nu a fost trimis, deoarece toate câmpurile sunt obligatorii.";
+        $home = "Pagină principală";
+        $youremail = "E-mail-ul dumneavoastră :";
+        $yourquestion = "Întrebarea dumneavoastră :";
+
+        break;
+    // ESPAGNOL //
+    case "es":
+    	
+        $chat_box_message_success = "Su mensaje ha sido enviado correctamente.";
+        $chat_box_message_fail = "El mensaje no se ha enviado porque se requieren todos los campos.";
+        $home = "Inicio";
+        $youremail = "Su e-mail :";
+        $yourquestion = "Su pregunta :";
+
+        break;
+    
+    case "de":
+        
+        $chat_box_message_success = "Die Nachricht wurde erfolgreich abgeschickt.";
+        $chat_box_message_fail = "Ihre Nachricht konnte nicht gesendet werden, weil Alle Felder notwendig sind.";
+        $home = "Hauptseite";
+        $youremail = "Ihre E-Mail :";
+        $yourquestion = "Ihre Frage :";
+
+        break;
+	}
+	?>
+	<a href="../index.php?lang=<?= $lang ;?>">
+		<img src="../IMG/1168681.svg"><?= $home ;?>
+	</a>
+	<?php if (!empty($_POST['motif']) && !empty($_POST['question']) && !empty($_POST['email_1'])): ?>
+    	<?php mail($to, $subject, $question, $headers) ;?>
+    	<div class="sendmessage">
+	    	<img src='../IMG/2063b3b3-2054-4a07-83b6-0a10a04de771-e0e229cb-b694-4474-9d43-07fcf28055a6-v1.png'/>
+	    	<h3><?= $chat_box_message_success ;?></h3>
+	    	<h3><?= $youremail ;?></h3>
+	    	<p><?= $from ;?></p>
+	    	<h3><?= $yourquestion ;?></h3>
+	    	<p><?= $question ;?></p>
+	    </div>
+	<?php else: ?>
+		<div class="sendmessage">
+			<img src='../IMG/7ff91094-e4e4-496a-9975-c0b5f6ef26ef-e0e229cb-b694-4474-9d43-07fcf28055a6-v1.png'/>
+			<h3><?= $chat_box_message_fail ;?></h3>
+		</div>
+	<?php endif ;?>
+</body>
+</html>

@@ -27,9 +27,14 @@ switch ($lang) {
         $introduction12 = "En quête perpétuelle de nouveaux défis";
         $chatbox1 = "Une question ?";
         $chatbox2 = "C'est par ici.";
+
+        $chat_box_message_success = "Votre message a été envoyé.";
+        
         $snapchat = "<img src='IMG/monsnap.jpg'>";
         $networks = "Retrouvez-moi sur...";
         $instructions = "Cliquer sur une vignette pour <br/> afficher plus de détails.";
+        $downloadcv = "Télécharger mon CV sous PDF";
+        $selectalanguage = "1. Sélectionner une langue";
         $credits = "Mentions légales";
         break;
     // ANGLAIS //
@@ -53,9 +58,15 @@ switch ($lang) {
         $introduction12 = "In a perpetual quest for new challenges.";
         $chatbox1 = "A question ?";
         $chatbox2 = "It's right here.";
+
+
+        $chat_box_message_success = "Your message has been sent.";
+
         $snapchat = "<img src='IMG/mysnap.jpg'>";
         $networks = "Find me on...";
         $instructions = "Click on a thumbnail to <br/> display more details.";
+        $downloadcv = "Download my CV in PDF format";
+        $selectalanguage = "1. Select a language";
         $credits = "Legal notices";
         break;
     // ROUMAIN //
@@ -69,8 +80,8 @@ switch ($lang) {
         $introduction1 = "Junior Dezvoltator/Integrator Web";
         $introduction2 = "Quadrilingv";
         $introduction3 = "Cannes, Franța";
-        $introduction4 = "În curând Dezvoltator Python";
-        $introduction5 = "În curând Dezvoltator iOS";
+        $introduction4 = "Dezvoltator Python în curând";
+        $introduction5 = "Dezvoltator iOS în curând";
         $introduction7 = "Peste 20 de ţări vizitate";
         $introduction8 = "Permis de conducere";
         $introduction9 = "Fan jocurilor de strategie";
@@ -80,8 +91,12 @@ switch ($lang) {
         $snapchat = "<img src='IMG/meusnap.jpg'>";
         $chatbox1 = "O întrebare ?";
         $chatbox2 = "Este aici.";
+
+
         $networks = "Mă găsiți și pe...";
         $instructions = "Faceţi clic pe miniatură pentru <br/> a afișa mai multe informații.";
+        $downloadcv = "Descărca CV-ul meu în format PDF";
+        $selectalanguage = "1. Selectați Limbă";
         $credits = "Mențiuni legale";
         break;
     // ESPAGNOL //
@@ -106,8 +121,11 @@ switch ($lang) {
         $snapchat = "<img src='IMG/misnap.jpg'>";
         $chatbox1 = "¿Una pregunta?";
         $chatbox2 = "Está aquí.";
+
         $networks = "Encontrarme en...";
         $instructions = "Clica en las miniaturas para <br/> ver más detalles.";
+        $downloadcv = "Descargar mi CV en formato PDF";
+        $selectalanguage = "1. Seleccione un idioma";
         $credits = "Menciones legales ";
         break;
     
@@ -132,8 +150,12 @@ switch ($lang) {
         $snapchat = "<img src='IMG/meusnap.jpg'>";
         $chatbox1 = "Eine Frage ?";
         $chatbox2 = "Hier lang.";
+
+        
         $networks = "Folgt mir auf...";
         $instructions = "Klicken Sie auf ein Bild um Details anzuzeigen.";
+        $downloadcv = "Herunterladen Sie mein Lebenslauf im PDF-Format";
+        $selectalanguage = "1. Wählen Sie eine Sprache";
         $credits = "Rechtlichen Hinweise";
         break;
 	}

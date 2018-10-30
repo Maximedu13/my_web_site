@@ -1,0 +1,20 @@
+<form method="POST" action="PHP/sendmessage.php?lang=ro">
+	<label for="motif">Şi care e aceaa ?</label><br/>
+       <select name="motif">
+       	   <option disabled="disabled" selected="selected">-</option>
+           <option value="Question_de_programmation_informatique_générale">Întrebare generală despre programare</option>
+           <option value="Question_de_linguistique_générale">Întrebare generală despre lingvistică</option>
+           <option value="Question_sur_mes_compétences">Întrebare despre competențele mele</option>
+           <option value="Question_sur_mon_parcours">Întrebare despre studiile mele</option>
+           <option value="Question_sur_mes_diplômes">Întrebare despre diplomele mele</option>
+           <option value="Recrutabilité">Recrutare</option>
+           <option value="En_savoir_plus_sur_moi">Ști mai multe despre mine</option>
+           <option value="Autre">Alte întrebări</option>
+       </select>
+    <label for="email_1">Introduceți adresa dvs. de email</label></br>
+			<input type="email" name="email_1"/>
+    <label for="question">Întrebarea dumneavoastră :</label><br/>
+    	<textarea name="question"></textarea>
+    <br/>
+    <button type="submit">Trimite</button>
+</form>
