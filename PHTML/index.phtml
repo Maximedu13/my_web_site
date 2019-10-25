@@ -2,19 +2,40 @@
 <html lang="fr">
 <head>
 	<title>Curriculum Vitae</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Indie+Flower|Fredericka+the+Great|EB+Garamond|Charmonman|Crimson+Text" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-	<meta charset="utf-8">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="JS/slides/jquery.flexslider.js"></script>
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   	<link rel="stylesheet" href="/resources/demos/style.css">
-  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  	<script src="JS/slides/jquery.flexslider.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  	<script src="JS/index.js"></script>
+  	<!-- Hotjar Tracking Code for http://maxime.j.pro.free.fr/ -->
+	<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1211732,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135507942-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-135507942-1');
+	</script>
 </head>
 <body>
 	<header>
@@ -27,8 +48,7 @@
 						</a>
 					</li>
 					<h5>
-						<?php $explode = explode(' ', $language['Nom'], 5);
-						echo $explode[$number] ;?>
+						<?php explode_and_echo(' ', $language['Nom'], $number) ;?>
 					</h5>
 				<?php endforeach; ?>
 			</ul>
@@ -56,20 +76,17 @@
 					<li>
 						<a href="#contact"><?= $contact ;?></a>
 					</li>
-					<br/><br/>
 					<?php foreach($informatics as $informatic): ?>
-					<li>
-						<a href="#informatic"><?= "#" .$informatic['Nom']?></a>
-					</li>
+						<li>
+							<a href="#informatic"><?= "#" .$informatic['Nom']?></a>
+						</li>
 					<?php endforeach; ?>
-					<br/><br/>
 					<?php foreach($languages as $language): ?>
-					<li>
-						<a href="#linguistic"><?= "<span>". "#" . "</span>" ;?>
-							<?php $explode = explode(' ', $language['Nom'], 5);
-							echo $explode[$number] ;?>
-						</a>
-					</li>
+						<li>
+							<a href="#linguistic"><?= "<span>". "#" . "</span>" ;?>
+								<?php explode_and_echo(' ', $language['Nom'], $number) ;?>
+							</a>
+						</li>
 					<?php endforeach; ?>
 				</ul>
 			</nav>
@@ -99,7 +116,7 @@
 					<h4><?= $introduction4 ?></h4>
 				</div>
 				<div class="introduction-list">
-					<img src="IMG/552456.svg">
+					<img src="IMG/java-4.svg">
 					<h4><?= $introduction5 ?></h4>
 				</div>
 				<div class="introduction-list">
@@ -174,24 +191,26 @@
 					</ul>
 				</div>
 				<div class="right">
-				<?php foreach($informatics as $informatic): ?>
-				    <div class="details" value="<?= $informatic['iD'] ?>">
-			    		<div class="details-title">
-			    			<h3><?= str_replace("_", " ", $informatic['Nom']) ;?></h3>
-			    		</div>
-			    		<div class="details-title">
-			    			<p>
-					    		<?= "« " . $informatic['Details'] . " »" ;?>
-					    		<a href="<?= $informatic['source'] ;?>" target="_blank"><sup>[réf.]</sup></a>
-				    		</p>
-			    		</div>
-			    		<div class="progress">
-							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?= $informatic['progress'] ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?= $informatic['progress'] ?>%">
-								<?= $informatic['progress'] ?> %
-							</div>
-			    		</div>
-				    </div>
-				<?php endforeach; ?>
+					<?php foreach($informatics as $informatic): ?>
+					    <div class="details" value="<?= $informatic['iD'] ?>">
+				    		<div class="details-title">
+				    			<h3><?= str_replace("_", " ", $informatic['Nom']) ;?></h3>
+				    		</div>
+				    		<div class="details-title">
+				    			<p>
+				    				<?= "« " ;?>
+						    		<?php explode_and_echo('***', $informatic['Details'], $number) ;?>
+						    		<?= " »" ;?>
+						    		<a href="<?php explode_and_echo('***', $informatic['source'], $number) ;?>" target="_blank"><sup>[réf.]</sup></a>
+					    		</p>
+				    		</div>
+				    		<div class="progress">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?= $informatic['progress'] ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?= $informatic['progress'] ?>%">
+									<?= $informatic['progress'] ?> %
+								</div>
+				    		</div>
+					    </div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 			<div id="linguistic">
@@ -228,14 +247,16 @@
 					<?php foreach($languages as $language): ?>
 					    <div class="details" value="<?= $language['iD'] ?>">
 				    		<div class="details-title">
-				    			<h3><?php $explode = explode(' ', $language['Nom'], 5);
-									echo $explode[$number] ;?>
+				    			<h3>
+				    				<?php explode_and_echo(' ', $language['Nom'], $number) ;?>
 								</h3>
 				    		</div>
 				    		<div class="details-title">
 				    			<p>
-					    			<?= "« " . $language['Details'] . " »" ;?>
-					    			<a href="<?= $language['source'] ;?>" target="_blank"><sup>[réf.]</sup></a>
+				    				<?= "« " ;?>
+						    		<?php explode_and_echo('***', $language['Details'], $number) ;?>
+						    		<?= " »" ;?>
+						    		<a href="<?php explode_and_echo('***', $language['source'], $number) ;?>" target="_blank"><sup>[réf.]</sup></a>
 				    			</p>
 				    		</div>
 				    		<div class="progress">
@@ -254,33 +275,48 @@
 				<button value="pictures"></button>
 				<button value="others"></button>
 				<button value="works"></button>
+				<button value="elearning"></button>
 			</div>
 			<div id="realisations">
 				<?php foreach($realisations as $realisation): ?>
-					<a href=""><img src="IMG/<?= $realisation['Photo'] ?>"></a>
+					<figure>
+						<a href="<?= $realisation['url'] ?>" target="_blank"><img src="IMG/<?= $realisation['Photo'] ?>"></a>
+						<h1><?= $realisation['Nom'] ?></h1>
+					</figure>
 				<?php endforeach; ?>
 			</div>
 			<div id="pictures">
-				<ul>
-					<?php foreach($voyages as $voyage): ?>
+				<?php foreach($voyages as $voyage): ?>
+					<figure>
 						<img src="IMG/<?= $voyage['Image'] ?>">
-					<?php endforeach; ?>
-				</ul>
+						<h1><?= $voyage['Titre'] . " ". $voyage['Annee'] ;?></h1>
+					</figure>
+				<?php endforeach; ?>
 			</div>
 			<div id="canvas">
 				<?php include "canvas-" . $lang . ".phtml"; ?>
 			</div>
 			<div id="works">
 				<?php foreach($works as $work): ?>
-					<a href="IMG/<?= $work['URL']?>" target="_blank">
-						<img src="IMG/<?= $work['Image'] ?>">
+					<a href="<?= $work['URL']?>" target="_blank">
+						<img src="IMG/<?= $work['Logo'] ?>">
 						<legend>
-							<?php $explode = explode('.', $work['Nom'], 5);
-								echo $explode[$number]
-							;?>
+							<?php explode_and_echo('.', $work['Name'], $number) ;?>
+							<div class="details">
+								<?php echo $work['language'] ?>
+							</div>
 						</legend>
 					</a>
 				<?php endforeach; ?>
+			</div>
+			<div id="elearning">
+			  <ul>
+			  	<?php foreach($elearning as $e): ?>
+			    <li>
+			      <img src="elearning/<?= $e['url_image'] ?>"/>
+			    </li>
+			    <?php endforeach; ?>
+			  </ul>
 			</div>
 		</div>
 		<div id="diplomas">
@@ -288,11 +324,14 @@
 			<div class="timeline">
 				<?php foreach($diplomasleft as $diplomaleft): ?>
 			  	<div class="diplomas-left">
-			  		<div class="arrow-right">
-			    	</div>
 				    <div class="content">
-					    <h2><?= $diplomaleft['Month']." ".$diplomaleft['Year'] ;?></h2>
-					    <h3><?= $diplomaleft['Title'] ;?></h3>
+					    <h2>
+					    	<?php explode_and_echo('**', $diplomaleft['Month'], $number) ;?>
+					    	<?= $diplomaleft['Year'] ;?>
+					    </h2>
+					    <h3>
+					    	<?php explode_and_echo('**', $diplomaleft['Title'], $number) ;?>
+					    </h3>
 					    <img src="IMG/<?= $diplomaleft['Image'] ;?>">
 					    <p><?= "« ".$diplomaleft['Description']. " »";?>
 					    <a href="<?= $diplomaleft['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
@@ -303,17 +342,21 @@
 			</div>
 			<div id="vertical-line">
 				<?php for ($i=0; $i < 7; $i++) {
-					echo '<div class="circle">'.'</div>';}
+					echo '<div class="circle">'.'</div>';
+					;}
 				?>
 			</div>
 			<div class="timeline">
 				<?php foreach($diplomasright as $diplomaright): ?>
 				<div class="diplomas-right">
-			  		<div class="arrow-left">
-			    	</div>
 				    <div class="content">
-				    	<h2><?= $diplomaright['Month']." ".$diplomaright['Year'] ;?></h2>
-					    <h3><?= $diplomaright['Title'] ;?></h3>
+				    	<h2>
+				    		<?php explode_and_echo('**', $diplomaright['Month'], $number) ;?>
+				    		<?= $diplomaright['Year'] ;?>
+					    </h2>
+					    <h3>
+					    	<?php explode_and_echo('**', $diplomaright['Title'], $number) ;?>
+					    </h3>
 					    <img src="IMG/<?= $diplomaright['Image'] ;?>">
 					    <p><?= "« ".$diplomaright['Description']." »" ;?>
 					    <a href="<?= $diplomaright['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
@@ -322,21 +365,21 @@
 				</div>
 				<?php endforeach; ?>
 			</div>
-		</div>
-		<div class="chat-box">
-			<div class="buttons">
-				<button>X</button>
-			</div>
-		  	<div class="open">
-			  	<img src="IMG/214e2e2c-3a98-46f6-9b61-50c57a0d8fca-fadb0362-e723-4ab1-868d-9e256437ef3e-v1.png">
-			  	<!-- ON PASSE LES VARIABLES PHP EN JQUERY -->
-			  	<script>
-				  	var chatbox1 = <?php echo json_encode($chatbox1); ?>;
-		 			var chatbox2 = <?php echo json_encode($chatbox2); ?>;
-				</script>
-			  	<h4><?= $chatbox1 ?></h4>
-				<div class="box">
-					<?php include "form-" . $lang . ".phtml" ;?>
+			<div class="chat-box">
+				<div class="buttons">
+					<button>X</button>
+				</div>
+			  	<div class="open">
+				  	<img src="IMG/214e2e2c-3a98-46f6-9b61-50c57a0d8fca-fadb0362-e723-4ab1-868d-9e256437ef3e-v1.png">
+				  	 <!-- ON PASSE LES VARIABLES PHP EN JQUERY -->
+				  	<script>
+					  	var chatbox1 = <?php echo json_encode($chatbox1); ?>;
+			 			var chatbox2 = <?php echo json_encode($chatbox2); ?>;
+					</script>
+				  	<h4><?= $chatbox1 ?></h4>
+					<div class="box">
+						<?php include "form-" . $lang . ".phtml" ;?>
+					</div>
 				</div>
 		  	</div>
 		</div>
@@ -364,7 +407,7 @@
 			<li><i class="fas fa-user-circle"></i> Maxime Jacquette</li>
 			<li><i class="fas fa-envelope-open"></i> maxime.j.pro@free.fr</li>
 			<li><i class="fas fa-phone-volume"></i> +33 7 83 89 96 37</li>
-			<li><i class="fas fa-location-arrow"></i> 06400 Cannes</li>
+			<li><i class="fas fa-location-arrow"></i>Lattes, France</li>
 			<li>Mis en ligne par FREE</li>
 			<li>Siège Social de Free</li> 
 			<li>8 Rue de la Ville-l’Évêque</li>
@@ -372,6 +415,21 @@
 			<li>01 73 50 20 00</li>
 		</ul>
 	</footer>
-	<script src="JS/index.js"></script>
+	<!-- phpmyvisites -->
+	<a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics" 
+	onclick="window.open(this.href);return(false);"><script type="text/javascript">
+	<!--
+	var a_vars = Array();
+	var pagename='';
+
+	var phpmyvisitesSite = 293752;
+	var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
+	//-->
+	</script>
+	<script language="javascript" src="http://st.free.fr/phpmyvisites.js" type="text/javascript"></script>
+	<object><noscript><p>phpMyVisites | Open source web analytics
+	<img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0" />
+	</p></noscript></object></a>
+	<!-- /phpmyvisites --> 
 </body>
 </html>

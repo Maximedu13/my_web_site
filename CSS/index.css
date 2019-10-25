@@ -1,7 +1,10 @@
 *{
 	padding: 0;
 	margin: 0;
-	user-select: none;
+	-webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
 	outline: none;
 }
 
@@ -22,6 +25,7 @@
     background: inherit;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
+
 :-webkit-scrollbar-thumb:window-inactive {
   background: rgba(255,0,0,0.4); 
 }
@@ -29,11 +33,11 @@
 
 
 header{
-	background: linear-gradient(rgba(0 ,55 ,0, 0.8), rgba(26,45,54, 0.7)),url(../IMG/code.png);
+	background: linear-gradient(rgba(0 ,55 ,0, 0.8), rgba(26,45,54, 0.7)), url(../IMG/videoblocks-listing-programming-code-running-a-computer-screen_b4uay93gb_thumbnail-full14.png);
 	background-size: cover;
-	height: 660px;
 	width: 100%;
 	color: white;
+  padding-bottom: 2%;
 }
 
 header #lang, header #presentation{
@@ -123,14 +127,9 @@ header #title h1{
 }
 
 
-
-
-
-
 /* ABOUT */
 
 #about {
-  background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 50%, #fdfcfb 99%);
 	height: 520px;
 	text-align: center;
   padding-top: 2%;
@@ -188,7 +187,7 @@ header #title h1{
 /* COMPETENCES */
 
 #competences{
-  background-image: linear-gradient(to bottom, #fdfcfb 0%, #e2d1c3 20%, white 99%);
+
   padding-top: 2%;
 }
 
@@ -282,9 +281,7 @@ header #title h1{
   margin-top: 5%;
 
 }
-#competences #linguistic .right{
 
-}
 
 
 #competences #informatic .left, #instructions-1{
@@ -383,13 +380,32 @@ header #title h1{
 #works img{
   height: 100px;
   width: 100px;
-}
-
-#works img, #works a{
   display: block;
+  vertical-align: top;
+}
+
+#works .details img, #works legend{
+  display: inline-block;
+  vertical-align: top;
 }
 
 
+#works legend{
+  color: black;
+  margin-bottom: 5%;
+}
+
+#works legend .details, #works legend{
+  display: inline-block;
+}
+
+#works legend .details{
+font-size: 70%;
+font-style: oblique;
+text-decoration: none;
+background-color: #c4151c;
+color: white;
+}
 
 #competences .right h3{
 	text-transform: uppercase;
@@ -412,9 +428,10 @@ header #title h1{
   margin: 2% 0 1% 0;
 }
 
+
 #buttons button:first-child{
   background:url(../IMG/644459.svg);
-  background-size: 70%;
+    background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   height: 70px;
@@ -425,17 +442,29 @@ header #title h1{
 
 #buttons button:nth-child(2){
 	background:url(../IMG/148717.svg);
-	background-size: 70%;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 70px;
-	width: 70px;
-	border-radius: 50%;
-	outline: none;
+    background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  outline: none;
 }
+
 #buttons button:nth-child(3){
   background:url(../IMG/432541.svg);
-  background-size: 70%;
+    background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  outline: none;
+}
+
+#buttons button:nth-child(4){
+  background:url(../IMG/1161202.svg);
+    background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   height: 70px;
@@ -445,8 +474,8 @@ header #title h1{
 }
 
 #buttons button:last-child{
-  background:url(../IMG/1161202.svg);
-  background-size: 70%;
+  background:url(../IMG/201601.svg);
+    background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   height: 70px;
@@ -454,7 +483,40 @@ header #title h1{
   border-radius: 50%;
   outline: none;
 }
+
+#elearning{
+  display: none;
+}
+
+#elearning li{
+  display: inline-block;
+}
+
+#elearning img{
+  height: 350px;
+  width: 100%;
+  margin-bottom: 2px;
+  -webkit-transition: all 1s ease; /* Safari et Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* Internet Explorer 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+#elearning img:hover{
+  -webkit-transform:scale(1.1); /* Safari et Chrome */
+  -moz-transform:scale(1.1); /* Firefox */
+  -ms-transform:scale(1.1); /* Internet Explorer 9 */
+  -o-transform:scale(1.1); /* Opera */
+  transform:scale(1.1);
+  background-color: rgb(0,0,0, 0.5);
+}
+
+
 /* MAIN */
+
+main{
+  background-color: #eef1f5;
+}
 
 main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, main #contact > h1{
   text-align: center;
@@ -468,13 +530,12 @@ main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, mai
 
 #diplomas{
   padding:5% 5% 1% 5%;
-  background-image: linear-gradient(to bottom, white 0%, #e6e9f0 10%, #eef1f5 50%, white 100%);
 }
 
 #diplomas #vertical-line{
   width: 10px;
   height: 2000px;
-  background-image: linear-gradient(to bottom, #e6e9f0 0%, #cf556c 10%, #ff8c7f 31%, #f99185 52%, #cf556c 78%, white 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #cf556c 10%, #ff8c7f 31%, #f99185 52%, #cf556c 78%, transparent 100%);
   margin-left: 5%;
 }
 
@@ -514,6 +575,7 @@ main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, mai
 #diplomas .content h2{
   text-align: center;
   color: white;
+  font-weight: bolder;
   font-size: 1.3em;
   padding: 1% 0 1% 0;
   font-family: 'Fredericka the Great', cursive;
@@ -553,36 +615,33 @@ main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, mai
   background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
 
-#diplomas .circle:hover{
-
-}
 
 #diplomas .circle:first-child{
- margin-top: 150px;
+  margin-top: 150px;
 }
 
 #diplomas .circle:nth-child(2){
- margin-top: 150px;
+  margin-top: 150px;
 }
 
 #diplomas .circle:nth-child(3){
- margin-top: 310px;
+  margin-top: 310px;
 }
 
 #diplomas .circle:nth-child(4){
- margin-top: 152.5px;
+  margin-top: 165px;
 }
 
 #diplomas .circle:nth-child(5){
- margin-top: 205px;
+  margin-top: 200px;
 }
 
 #diplomas .circle:nth-child(6){
- margin-top: 435px;
+  margin-top: 450px;
 }
 
 #diplomas .circle:last-child{
- margin-top: 120px;
+  margin-top: 120px;
 }
 
 #diplomas .diplomas-right:first-child{
@@ -590,61 +649,15 @@ main #about h1, main #competences h1, main #diplomas h1, main #portfolio h1, mai
   margin-bottom: 150px;
 }
 
-
-
 #diplomas h1{
     margin-bottom: 5%;
 }
 
 
 
-#diplomas .arrow-right {
-  width: 15%; 
-  height: 3px; 
-  background-color: red;
-  position: relative;
-  top: 165px;
-  left: 100%;
-
-
-}
-
-#diplomas .arrow-left{
-  width: 10%;  
-  height: 3px; 
-  background-color: red;
-  position: relative;
-  top: 160px;
-  right: 10%;
-}
-
 
 /* RéALISATIONS */
 
-#realisations li{
-	margin: 0;
-	padding: 0;
-
-}
-#realisations img{
-	height: 300px;
-	width: 33%;
-	display: inline-block;
-	-webkit-transition: all 1s ease; /* Safari et Chrome */
-	-moz-transition: all 1s ease; /* Firefox */
-	-ms-transition: all 1s ease; /* Internet Explorer 9 */
-	-o-transition: all 1s ease; /* Opera */
-	transition: all 1s ease;
-}
-
-main #realisations img:hover{
-	-webkit-transform:scale(1.1); /* Safari et Chrome */
-	-moz-transform:scale(1.1); /* Firefox */
-	-ms-transform:scale(1.1); /* Internet Explorer 9 */
-	-o-transform:scale(1.1); /* Opera */
-	transform:scale(1.1);
-	background-color: rgb(0,0,0, 0.5);
-}
 
 
 
@@ -660,10 +673,9 @@ main #pictures{
 	display: none;
 }
 
-main #pictures img{
-	height: 350px;
-  width: 33%;
-  display: inline-block;
+main #pictures figure img, main #realisations figure img{
+  width: 100%;
+  margin-bottom: 2px;
   -webkit-transition: all 1s ease; /* Safari et Chrome */
   -moz-transition: all 1s ease; /* Firefox */
   -ms-transition: all 1s ease; /* Internet Explorer 9 */
@@ -671,8 +683,28 @@ main #pictures img{
   transition: all 1s ease;
 }
 
+main #pictures figure img{
+    height: 350px;
+}
 
-main #pictures img:hover{
+
+main #realisations figure img{
+    height: 300px;
+}
+
+main #pictures figure, main #realisations figure {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+}
+
+main #pictures h1, main #realisations h1{
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+  font-size: 30px;
+}
+
+main #pictures img:hover, main #realisations img:hover{
   -webkit-transform:scale(1.1); /* Safari et Chrome */
   -moz-transform:scale(1.1); /* Firefox */
   -ms-transform:scale(1.1); /* Internet Explorer 9 */
@@ -688,36 +720,37 @@ main #pictures img:hover{
   #contact{
     margin-top: 5%;
   }
+
   #contact-fr{
-    background-image: url(../IMG/antibes.png);
+    background-image: url(../IMG/cannes.png);
     background-repeat: no-repeat;
     background-position: top;
-    padding-bottom: 4%;
-    background-size: 120%;
+    background-size: 135%;
+    height: 785px;
   }
 
   #contact-en{
     background-image: url(../IMG/sanfrancisco.png);
     background-repeat: no-repeat;
-    background-position: center left;
-    background-size: 135%;
-    padding-bottom: 2%;
+    background-position: center right;
+    background-size: 150%;
+    height: 780px;
   }
 
   #contact-ro{
     background-image: url(../IMG/bucarest.png);
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 155%;
-    padding-bottom: 1%;
+    background-position: center;
+    background-size: 135%;
+     height: 780px;
   }
 
   #contact-es{
-    background-image: url(../IMG/buenosaires.png);
+    background-image: url(../IMG/chili.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130%;
-    padding-bottom: 1%;
+    height: 760px;
   }
 
   #contact-de{
@@ -725,7 +758,7 @@ main #pictures img:hover{
     background-repeat: no-repeat;
     background-position: center ;
     background-size: 135%;
-    padding-bottom: 1%;
+    height: 790px;
   }
 
   #contact #form {
@@ -735,9 +768,7 @@ main #pictures img:hover{
 
   }
 
- #contact #downloads a{
- 
-}
+
 
   #contact #downloads h1{
     font-size: 20px;
@@ -757,14 +788,12 @@ main #pictures img:hover{
     vertical-align: top;
   }
  
-  #downloads-1, #downloads-2, #downloads-3 {
+  #downloads-1, #downloads-2{
     margin-bottom: 5%;
     padding: 2%;
     background:rgba(255,255,255,0.8);
   }
-  #downloads-3{
-    display: none;
-  }
+  
   #downloads img{
     width: 30%;
   }
@@ -782,6 +811,7 @@ main #pictures img:hover{
   .sentence {
     font-family: 'EB Garamond', serif;
     font-size: 2em;
+    padding-top: 1%;
   }
 
   .rotate{
@@ -937,12 +967,16 @@ footer {
 footer #social{
   text-align: center;
   float: right;
-  width: 50%;
+  width: 45%;
+  margin-right: 5%;
 }
 
 footer #social h4{
   color: white;
+  font-style: italic;
+
 }
+
 footer #social .circle{
   display: flex;
   flex-direction: row;
@@ -955,9 +989,12 @@ footer #social .circle{
 footer #social .circle i{
   font-size: 20px;
   padding: 30px;
-  border:1px solid white;
+  border:1px solid #555;
 }
 
+footer #social .circle a{
+   color: #337ab7;
+}
 
  footer #dialog-message{
   display: none;
@@ -973,22 +1010,23 @@ footer #social .circle i{
 }
 
 footer #credits{
-  width: 50%;
+  width: 30%;
   text-align: justify;
   list-style-type: none;
   color: white;
-  padding-left: 12.5%;
+  margin: 1%;
 }
-footer #credits li{
-}
+
 
 footer #social, footer #credits{
   display: inline-block;
-  padding-top: 4%;
-  height: 300px;
+  vertical-align: top;
+  font-family: 'Architects Daughter', cursive;
 }
+
 footer .fa-snapchat-ghost{
   cursor: pointer;
+  color: #337ab7;
 }
 
 
@@ -1072,16 +1110,41 @@ footer .fa-snapchat-ghost{
   border: 1px solid black;
 }
 
-/* MEDIA QUERIES */
 
-@media only screen and (max-width: 600px) {
+
+
+
+
+
+/* MEDIA QUERIES 
+IPHONE 7
+*/
+
+@media only screen and (max-width: 750px) {
+
   header{
-    height: 800px;
+    height: 870px;
   }
+
   header #lang{
     transform: scale(0.8);
     width: 20%;
     margin: 0;
+  }
+
+
+  #introduction-me{
+    margin: 0 0 0 40%;
+  }
+
+
+  #realisations img{
+    height: 150px;
+    width: 49%;
+  }
+
+  #informatic .left{
+    transform: scale(0.8);
   }
 
   #presentation #title{
@@ -1093,26 +1156,171 @@ footer .fa-snapchat-ghost{
     transform: scale(0.7);
     margin: -150px 0 0 0;
   }
+
   #about #introduction-me img{
     text-align: center;
     height: 100px;
     width: 100px;
   }
+
   #about #introduction-l{
     transform: scale(0.9);
     margin: 0;
     width: 100%;
     font-size: 75%;
   }
-  footer #clapperboard{
-    transform: scale(0.6);
-  }
-  .chat-box{
 
+  main #pictures img{
+    width: 49%;
+    height: 250px;
   }
-  footer #social{
+
+  #moncanvas{
+    margin: 0;
+    width: 100%;
+  }
+
+  #canvas{
+    margin: 0;
+    width: 100%;
+  }
+
+  #contact{
+    height: 1200px;
+    background-size: 55%;
+  }
+
+  #contact .sentence{
+    transform: scale(0.7);
+  }
+
+  #contact .rotate span{
     transform: scale(0.4);
-    position: relative;
   }
 
+
+  #contact #form{
+    width: 100%;
+    margin: 0;
+  }
+
+  #realisations img{
+    margin-bottom: 4px;
+  }
+
+  #works{
+    transform: scale(0.8);
+  }
+
+  .chat-box{
+    display: none;
+
+  }
+
+  #contact #downloads{
+    width: 100%;
+    margin: 0;
+  }
+
+  #diplomas {
+    padding: 0;
+  }
+
+  .diplomas-left, .diplomas-right{
+    width: 49%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+
+
+  #diplomas .timeline .diplomas-left, #diplomas .timeline .diplomas-right{
+    margin:0;
+  }
+
+
+  #diplomas .timeline {
+    margin:0;
+    width: 100%;
+  }
+  #diplomas h3{
+    font-size: 15px;
+  }
+
+
+
+
+  .arrow-right, .arrow-left, #diplomas #vertical-line{
+    display: none;
+  }
+
+  footer #social{
+    transform: scale(0.7);
+    width: 40%;
+  }
+
+  footer #social .circle{
+    transform: scale(0.8);
+    display: block;
+  }
+
+
+  footer #social .circle a, .fa-snapchat-ghost {
+    margin-bottom: 10px;
+  }
+
+  #competences #informatic .left, #competences #informatic .right{
+    display: block;
+  }
+
+  #competences #informatic .left, #competences #informatic .right, #competences #linguistic .left, #competences #linguistic .right{
+    width: 90%;
+    margin: 0 5% 0 5%;
+  }
+
+  #competences #informatic .right, #competences #linguistic .right{
+    margin-bottom: 10%;
+  }
+
+  #competences #informatic #instructions-1, #competences #linguistic #instructions-2{
+    display: none;
+  }
+
+  #competences #informatic .left, #competences #linguistic .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: scale(0.9);
+  }
+
+  .hex-row.even, .hex-row{
+    margin: 0;
+  }
+
+  .hex{
+    margin-bottom: 10px;
+  }
+
+  header #menu{
+    margin-top: 5%;
+  }
+
+  main #pictures figure{
+    width: 49%;
+  }
+   main #pictures figure img{
+    height: 100px;
+  }
+  main #pictures figure h1{
+    font-size: 70%;
+  }
+
+  #elearning li{
+    width: 49%;
+  }
+  #elearning img{
+    height: 100px;
+  }
 }
+

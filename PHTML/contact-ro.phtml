@@ -10,7 +10,7 @@
 			<span>creez</span>
 		</div>
 		<h2 class="sentence">pentru dumneavoastră astăzi ?</h2>
-		<form>
+		<form method="POST" action="PHP/sendemail.php?lang=ro">
 			<ul class="form-group">
 		        <li>
 		        	<span class="icon-case"><i class="fa fa-male"></i></span>
@@ -19,7 +19,7 @@
 			    <br/><br/>
 			    <li>
 			    	<span class="icon-case"><i class="fas fa-envelope"></i></span>
-		    		<input type="text" name="mail" id="mail" data-rule="required" placeholder="E-mail." data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+		    		<input type="text" name="email" id="email" data-rule="required" placeholder="E-mail." data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
 			    </li>
 			   	<br/><br/>
 		       	<li>
@@ -50,18 +50,7 @@
 			<h1><?= $downloadcv ;?></h1>
 		</div>
 		<div id="downloads-2">
-			<h1><?= $selectalanguage ;?></h1>
-			<br/>
-			<select>
-				<option disabled="disabled" selected="selected" value="0">-</option>
-				<?php foreach($languages as $language): ?>
-					<option value="<?= $language['parametre_url'] ?>"><?php $explode = explode(' ', $language['Nom'], 5);
-						echo $explode[$number] ;?></option>
-				<?php endforeach; ?>
-			</select>
-		</div>
-		<div id="downloads-3">
-			<h1>2. Télécharger</h1>
+			<h1>Îmi pare rău, dar CV-ul meu nu este disponibil în română pentru moment.</h1>
 		</div>
 	</div>
 </div>

@@ -2,20 +2,6 @@
 
 var colors = ['#EEAA7B'];
 
-/*var languages_line_one = ['PHP', 'HTML', 'CSS', 'python', 'MySQL', 'javascript', 'jquery', 'DJANGO', 
-'symfony', 'wordpress', 'R', 'swift_4', 'hacking_ÉTHIQUE', 'deep_learning', 'scala', 'linux', 'windows', 'mac'];
-languages_line_one = languages_line_one.map(function(x) { 
-	return x.toUpperCase(); 
-});
-
-var languages_line_two = ['français', 'anglais', 'roumain', 'allemand', 'espagnol'];
-languages_line_two = languages_line_two.map(function(x) { 
-	return x.toUpperCase(); 
-});
-*/
-
-
-//
 $(document).ready(function(){
 	$( '.hex' ).each(function( index ) {
 		var random_color = colors[Math.floor(Math.random() * colors.length)];
@@ -37,24 +23,67 @@ $(document).ready(function(){
 	  		$("#competences #linguistic .details[value=" + [index] + "]").show();
 		});
 	});
+ 	
+
+ 	$( "#competences #linguistic .hex[value=23]").click(function() {
+		$("#competences #linguistic .details").hide();
+		$("#instructions-2").hide();
+  		$("#competences #linguistic .details[value=23]").show();
+	});
+
+
+
+ 	$( '#diplomas .circle').each(function( index ) {
+		$( "#diplomas .circle:nth-child(" + 2* + [index] + ")").mouseover(function() {
+			$(".diplomas-right:nth-child(" + [index] + ")").css('transform', 'scale(' + 1.1 + ')');
+	  		$(".diplomas-right:nth-child(" + [index] + ")").css('transition', 'all 2s ease');
+
+		});
+
+
+		$( "#diplomas .circle:nth-child(" + [index] + ")").mouseover(function() {
+			$(".diplomas-left:nth-child(" + [index] + ")").css('transform', 'scale(' + 1.1 + ')');
+	  		$(".diplomas-left:nth-child(" + [index] + ")").css('transition', 'all 2s ease');
+
+		});
+
+
+
+
+		$( "#diplomas .circle:nth-child(" + [index] + ")").mouseout(function() {
+	  		$(".diplomas-left:nth-child(" + [index] + ")").css('transform', 'scale(' + 1 + ')');
+	  		$(".diplomas-left:nth-child(" + [index] + ")").css('transition', 'all 2s ease');
+		});
+
+
+		$( "#diplomas .circle:nth-child(" + 2* + [index] + ")").mouseout(function() {
+	  		$(".diplomas-right:nth-child(" + [index] + ")").css('transform', 'scale(' + 1 + ')');
+	  		$(".diplomas-right:nth-child(" + [index] + ")").css('transition', 'all 2s ease');
+		});
+	});
+
+
 
 
 	$( 'button[value=pictures]' ).click(function(){
 		$("#realisations").hide();
 		$("#canvas").hide();
 		$("#works").hide();
+		$("#elearning").hide();
 		$("#pictures").show();
 	});
 	$( 'button[value=realisations]' ).click(function(){
 		$("#realisations").show();
 		$("#pictures").hide();
 		$("#works").hide();
+		$("#elearning").hide();
 		$("#canvas").hide();
 	});
 	$( 'button[value=others]' ).click(function(){
 		$("#canvas").show();
 		$("#pictures").hide();
 		$("#works").hide();
+		$("#elearning").hide();
 		$("#realisations").hide();
 	});
 
@@ -62,9 +91,17 @@ $(document).ready(function(){
 		$("#works").show();
 		$("#pictures").hide();
 		$("#realisations").hide();
+		$("#elearning").hide();
 		$("#canvas").hide();
 	});
 
+	$( 'button[value=elearning]' ).click(function(){
+		$("#elearning").show();
+		$("#works").hide();
+		$("#pictures").hide();
+		$("#realisations").hide();
+		$("#canvas").hide();
+	});
 
 
 	$( '.open' ).mouseover(function(){
@@ -79,6 +116,7 @@ $(document).ready(function(){
 	$( '.chat-box button' ).click(function(){
 		$( '.chat-box' ).hide();
 	});
+
 
 	$( 'footer .fa-snapchat-ghost' ).click(function(){
 		$( 'footer .fa-snapchat-ghost' ).click(function(){
@@ -102,4 +140,5 @@ $(document).ready(function(){
 		});
 	});
 });
+
 

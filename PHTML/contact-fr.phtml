@@ -10,16 +10,16 @@
 		  <span>crée</span>
 		</div>
 		<h2 class="sentence">pour vous aujourd'hui ?</h2>
-		<form>
+		<form method="POST" action="PHP/sendemail.php?lang=fr">
 			<ul class="form-group">
 		        <li>
 		        	<span class="icon-case"><i class="fa fa-male"></i></span>
-			    	<input type="text" name="name" id="name" placeholder="Nom et prénom." data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+			    	<input type="text" name="name" placeholder="Nom et prénom." data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
 			    </li>
 			    <br/><br/>
 			    <li>
 			    	<span class="icon-case"><i class="fas fa-envelope"></i></span>
-			    	<input type="text" name="mail" id="mail" data-rule="required" placeholder="E-mail." data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+			    	<input type="text" name="email" id="email" data-rule="required" placeholder="E-mail." data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
 			    </li>
 			   	<br/><br/>
 		       	<li>
@@ -34,13 +34,13 @@
 		   		<br/><br/>
 			   	<li>
 			   		<span class="icon-case"><i class="fas fa-comments"></i></span>
-			    	<textarea type="text" name="message" id="message" data-rule="required" placeholder="Message." data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."></textarea>
+			    	<textarea type="text" name="message" id="message" data-rule="required" placeholder="Message."></textarea>
 			   	</li>
 			</ul>
 			<br>
 			<div class="buttons">
-				<button type="reset" name="button">Annuler</button>
-				<button type="submit" name="button">Envoyer</button>
+				<button type="reset" name="reset">Annuler</button>
+				<button type="submit" name="submit">Envoyer</button>
 			</div>
 		</form>
 	</div>
@@ -50,18 +50,8 @@
 			<h1><?= $downloadcv ;?></h1>
 		</div>
 		<div id="downloads-2">
-			<h1><?= $selectalanguage ;?></h1>
-			<br/>
-			<select>
-				<option disabled="disabled" selected="selected" value="0">-</option>
-				<?php foreach($languages as $language): ?>
-					<option value="<?= $language['parametre_url'] ?>"><?php $explode = explode(' ', $language['Nom'], 5);
-						echo $explode[$number] ;?></option>
-				<?php endforeach; ?>
-			</select>
-		</div>
-		<div id="downloads-3">
-			<h1>2. Télécharger</h1>
+			<h1>Télécharger</h1>
+			<a href="CV-s/CV-FR.pdf" download><img src="CV-s/pic-cvfr.png"></a>
 		</div>
 	</div>
 </div>
