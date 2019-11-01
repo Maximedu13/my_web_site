@@ -280,16 +280,16 @@
 			<div id="realisations">
 				<?php foreach($realisations as $realisation): ?>
 					<figure>
-						<a href="<?= $realisation['url'] ?>" target="_blank"><img src="IMG/<?= $realisation['Photo'] ?>"></a>
-						<h1><?= $realisation['Nom'] ?></h1>
+						<a href="<?= $realisation['url'] ?>" target="_blank"><img src="IMG/<?= $realisation['photo'] ?>"></a>
+						<h1><?= $realisation['nom'] ?></h1>
 					</figure>
 				<?php endforeach; ?>
 			</div>
 			<div id="pictures">
 				<?php foreach($voyages as $voyage): ?>
 					<figure>
-						<img src="IMG/<?= $voyage['Image'] ?>">
-						<h1><?= $voyage['Titre'] . " ". $voyage['Annee'] ;?></h1>
+						<img src="IMG/<?= $voyage['image'] ?>">
+						<h1><?= $voyage['titre'] . " ". $voyage['annee'] ;?></h1>
 					</figure>
 				<?php endforeach; ?>
 			</div>
@@ -299,9 +299,9 @@
 			<div id="works">
 				<?php foreach($works as $work): ?>
 					<a href="<?= $work['URL']?>" target="_blank">
-						<img src="IMG/<?= $work['Logo'] ?>">
+						<img src="IMG/<?= $work['logo'] ?>">
 						<legend>
-							<?php explode_and_echo('.', $work['Name'], $number) ;?>
+							<?php explode_and_echo('.', $work['name'], $number) ;?>
 							<div class="details">
 								<?php echo $work['language'] ?>
 							</div>

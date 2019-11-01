@@ -285,7 +285,7 @@ mysql_close($link);
 	');
 	// Exécution de la requête
 	$query->execute();
-	$socials = $query->fetchAll();
+	$social = $query->fetchAll();
 
 	$query = $pdo->prepare('
 	SELECT 
