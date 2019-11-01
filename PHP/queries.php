@@ -219,9 +219,9 @@ mysql_close($link);
 	FROM 
 		competences
 	WHERE
-		iD <= 6 AND category = 'informatique'
+		id <= 6 AND category = 'informatique'
 	ORDER BY 
-		iD
+		id
 	");
 	// Exécution de la requête
 	$query->execute();
@@ -257,7 +257,7 @@ mysql_close($link);
 	WHERE
 		category = 'linguistique' AND id > 18 AND id < 22
 	ORDER BY 
-		iD ASC
+		id ASC
 	");
 	// Exécution de la requête
 	$query->execute();
