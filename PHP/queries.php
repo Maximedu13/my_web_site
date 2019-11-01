@@ -169,32 +169,32 @@
 mysql_close($link);
 */
 
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		Nom = "HTML" OR
-		Nom = "CSS" OR
-		Nom = "php" OR
-		Nom = "javascript" OR
-		Nom = "mysql"
-	');
+		Nom = 'HTML' OR
+		Nom = 'CSS' OR
+		Nom = 'php' OR
+		Nom = 'javascript' OR
+		Nom = 'mysql'
+	");
 	// Exécution de la requête
 	$query->execute();
 	$maitrises= $query->fetchAll();
 
 
 
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		category = "informatique"
-	');
+		category = 'informatique'
+	");
 	// Exécution de la requête
 	$query->execute();
 	$informatics = $query->fetchAll();
@@ -213,63 +213,64 @@ mysql_close($link);
 	$languages = $query->fetchAll();
 
 
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		iD <= 6 AND category = "informatique"
+		iD <= 6 AND category = 'informatique'
 	ORDER BY 
 		iD
-	');
+	");
 	// Exécution de la requête
 	$query->execute();
 	$tops = $query->fetchAll();
-	$query = $pdo->prepare('
+
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		iD BETWEEN 7 AND 12 AND category = "informatique"
-	');
+		id BETWEEN 7 AND 12 AND category = 'informatique'
+	");
 	// Exécution de la requête
 	$query->execute();
 	$mids = $query->fetchAll();
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		iD > 12 AND category = "informatique"
-	');
+		id > 12 AND category = 'informatique'
+	");
 	// Exécution de la requête
 	$query->execute();
 	$bottoms = $query->fetchAll();
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		category = "linguistique" AND iD > 18 AND iD < 22
+		category = 'linguistique' AND id > 18 AND id < 22
 	ORDER BY 
 		iD ASC
-	');
+	");
 	// Exécution de la requête
 	$query->execute();
 	$languagestops = $query->fetchAll();
 
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		category = "linguistique" AND iD > 21
-	');
+		category = 'linguistique' AND id > 21
+	");
 
 	// Exécution de la requête
 	$query->execute();
