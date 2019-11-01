@@ -20,7 +20,7 @@ switch ($lang) {
     	$contact = "contact";
         $introduction1 = "Développeur/intégrateur en réalisation d’applications web Junior";
         $introduction2 = "Quadrilingue";
-        $introduction3 = "Lattes, France";
+        $introduction3 = "Lattes (Hérault), France";
         $introduction4 = "Actuellement en formation de développeur Python";
         $introduction5 = "Actuellement en formation de développeur JAVA";
         $introduction7 = "Plus de 20 pays visités";
