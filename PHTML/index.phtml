@@ -48,7 +48,7 @@
 						</a>
 					</li>
 					<h5>
-						<?php explode_and_echo(' ', $language['Nom'], $number) ;?>
+						<?php explode_and_echo(' ', $language['nom'], $number) ;?>
 					</h5>
 				<?php endforeach; ?>
 			</ul>
@@ -78,13 +78,13 @@
 					</li>
 					<?php foreach($informatics as $informatic): ?>
 						<li>
-							<a href="#informatic"><?= "#" .$informatic['Nom']?></a>
+							<a href="#informatic"><?= "#" .$informatic['nom']?></a>
 						</li>
 					<?php endforeach; ?>
 					<?php foreach($languages as $language): ?>
 						<li>
 							<a href="#linguistic"><?= "<span>". "#" . "</span>" ;?>
-								<?php explode_and_echo(' ', $language['Nom'], $number) ;?>
+								<?php explode_and_echo(' ', $language['nom'], $number) ;?>
 							</a>
 						</li>
 					<?php endforeach; ?>
@@ -121,7 +121,7 @@
 				</div>
 				<div class="introduction-list">
 					<img src="IMG/321817.svg">
-					<h4><a href="mailto:maxime.j.pro@free.fr">maxime.j.pro@free.fr</a></h4>
+					<h4><a href="mailto:maxime.j.sfr@free.fr">maxime.j.pro@sfr.fr</a></h4>
 				</div>
 				<div class="introduction-list">
 					<img src="IMG/201623.svg">
@@ -326,11 +326,11 @@
 			  	<div class="diplomas-left">
 				    <div class="content">
 					    <h2>
-					    	<?php explode_and_echo('**', $diplomaleft['Month'], $number) ;?>
+					    	<?php explode_and_echo('**', $diplomaleft['nonth'], $number) ;?>
 					    	<?= $diplomaleft['Year'] ;?>
 					    </h2>
 					    <h3>
-					    	<?php explode_and_echo('**', $diplomaleft['Title'], $number) ;?>
+					    	<?php explode_and_echo('**', $diplomaleft['title'], $number) ;?>
 					    </h3>
 					    <img src="IMG/<?= $diplomaleft['image'] ;?>">
 					    <p><?= "« ".$diplomaleft['Description']. " »";?>
@@ -351,14 +351,14 @@
 				<div class="diplomas-right">
 				    <div class="content">
 				    	<h2>
-				    		<?php explode_and_echo('**', $diplomaright['Month'], $number) ;?>
+				    		<?php explode_and_echo('**', $diplomaright['month'], $number) ;?>
 				    		<?= $diplomaright['Year'] ;?>
 					    </h2>
 					    <h3>
-					    	<?php explode_and_echo('**', $diplomaright['Title'], $number) ;?>
+					    	<?php explode_and_echo('**', $diplomaright['title'], $number) ;?>
 					    </h3>
 					    <img src="IMG/<?= $diplomaright['image'] ;?>">
-					    <p><?= "« ".$diplomaright['Description']." »" ;?>
+					    <p><?= "« ".$diplomaright['description']." »" ;?>
 					    <a href="<?= $diplomaright['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
 					    </p>
 				    </div>
