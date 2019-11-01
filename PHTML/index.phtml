@@ -197,7 +197,7 @@
 				<div class="left">
 				    <div class="hex-row">
 				    	<?php foreach($languagestops as $languagestop): ?>
-							<div class="hex" value="<?= $languagestop['iD'] ?>">
+							<div class="hex" value="<?= $languagestop['id'] ?>">
 					        	<div class="top"></div>
 					        	<div class="middle"><img src="IMG/<?= $languagestop['image'] ?>"></div>
 					        	<div class="bottom"></div>
@@ -206,7 +206,7 @@
 				    </div>
 				    <div class="hex-row even">
 				        <?php foreach($languagesbottoms as $languagesbottom): ?>
-							<div class="hex" value="<?= $languagesbottom['iD'] ?>">
+							<div class="hex" value="<?= $languagesbottom['id'] ?>">
 					        	<div class="top"></div>
 					        	<div class="middle"><img src="IMG/<?= $languagesbottom['image'] ?>"></div>
 					        	<div class="bottom"></div>
@@ -225,7 +225,7 @@
 				</div>
 				<div class="right">
 					<?php foreach($languages as $language): ?>
-					    <div class="details" value="<?= $language['iD'] ?>">
+					    <div class="details" value="<?= $language['id'] ?>">
 				    		<div class="details-title">
 				    			<h3>
 				    				<?php explode_and_echo(' ', $language['nom'], $number) ;?>
