@@ -200,15 +200,14 @@ mysql_close($link);
 	$informatics = $query->fetchAll();
 
 
-
-	$query = $pdo->prepare('
+	$query = $pdo->prepare("
 	SELECT 
 		*
 	FROM 
 		competences
 	WHERE
-		category = "linguistique"
-	');
+		category = 'linguistique'
+	");
 	// Exécution de la requête
 	$query->execute();
 	$languages = $query->fetchAll();
