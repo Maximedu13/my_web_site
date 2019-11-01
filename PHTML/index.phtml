@@ -44,7 +44,7 @@
 				<?php foreach($languages as $language): ?>
 					<li>
 						<a href="index.php?lang=<?= $language['parametre_url'] ?>">
-						<img src="IMG/<?= $language['Image']?>">
+						<img src="IMG/<?= $language['image']?>">
 						</a>
 					</li>
 					<h5>
@@ -155,9 +155,9 @@
 				<div class="left">
 				    <div class="hex-row">
 				    	<?php foreach($tops as $top): ?>
-						<div class="hex" value="<?= $top['iD'] ?>">
+						<div class="hex" value="<?= $top['id'] ?>">
 				        	<div class="top"></div>
-				        	<div class="middle"><img src="IMG/<?= $top['Image'] ?>"></div>
+				        	<div class="middle"><img src="IMG/<?= $top['image'] ?>"></div>
 				        	<div class="bottom"></div>
 				        </div>
 						<?php endforeach; ?>
@@ -166,16 +166,16 @@
 				        <?php foreach($mids as $mid): ?>
 						<div class="hex" value="<?= $mid['iD'] ?>">
 				        	<div class="top"></div>
-				        	<div class="middle"><img src="IMG/<?= $mid['Image'] ?>"></div>
+				        	<div class="middle"><img src="IMG/<?= $mid['image'] ?>"></div>
 				        	<div class="bottom"></div>
 				        </div>
 						<?php endforeach; ?>
 				    </div>
 				    <div class="hex-row">
 				        <?php foreach($bottoms as $bottom): ?>
-						<div class="hex" value="<?= $bottom['iD'] ?>">
+						<div class="hex" value="<?= $bottom['id'] ?>">
 				        	<div class="top"></div>
-				        	<div class="middle"><img src="IMG/<?= $bottom['Image'] ?>"></div>
+				        	<div class="middle"><img src="IMG/<?= $bottom['image'] ?>"></div>
 				        	<div class="bottom"></div>
 				        </div>
 						<?php endforeach; ?>
@@ -192,14 +192,14 @@
 				</div>
 				<div class="right">
 					<?php foreach($informatics as $informatic): ?>
-					    <div class="details" value="<?= $informatic['iD'] ?>">
+					    <div class="details" value="<?= $informatic['id'] ?>">
 				    		<div class="details-title">
-				    			<h3><?= str_replace("_", " ", $informatic['Nom']) ;?></h3>
+				    			<h3><?= str_replace("_", " ", $informatic['nom']) ;?></h3>
 				    		</div>
 				    		<div class="details-title">
 				    			<p>
 				    				<?= "« " ;?>
-						    		<?php explode_and_echo('***', $informatic['Details'], $number) ;?>
+						    		<?php explode_and_echo('***', $informatic['details'], $number) ;?>
 						    		<?= " »" ;?>
 						    		<a href="<?php explode_and_echo('***', $informatic['source'], $number) ;?>" target="_blank"><sup>[réf.]</sup></a>
 					    		</p>
@@ -219,7 +219,7 @@
 				    	<?php foreach($languagestops as $languagestop): ?>
 							<div class="hex" value="<?= $languagestop['iD'] ?>">
 					        	<div class="top"></div>
-					        	<div class="middle"><img src="IMG/<?= $languagestop['Image'] ?>"></div>
+					        	<div class="middle"><img src="IMG/<?= $languagestop['image'] ?>"></div>
 					        	<div class="bottom"></div>
 					        </div>
 						<?php endforeach; ?>
@@ -228,7 +228,7 @@
 				        <?php foreach($languagesbottoms as $languagesbottom): ?>
 							<div class="hex" value="<?= $languagesbottom['iD'] ?>">
 					        	<div class="top"></div>
-					        	<div class="middle"><img src="IMG/<?= $languagesbottom['Image'] ?>"></div>
+					        	<div class="middle"><img src="IMG/<?= $languagesbottom['image'] ?>"></div>
 					        	<div class="bottom"></div>
 					        </div>
 						<?php endforeach; ?>
@@ -248,13 +248,13 @@
 					    <div class="details" value="<?= $language['iD'] ?>">
 				    		<div class="details-title">
 				    			<h3>
-				    				<?php explode_and_echo(' ', $language['Nom'], $number) ;?>
+				    				<?php explode_and_echo(' ', $language['nom'], $number) ;?>
 								</h3>
 				    		</div>
 				    		<div class="details-title">
 				    			<p>
 				    				<?= "« " ;?>
-						    		<?php explode_and_echo('***', $language['Details'], $number) ;?>
+						    		<?php explode_and_echo('***', $language['details'], $number) ;?>
 						    		<?= " »" ;?>
 						    		<a href="<?php explode_and_echo('***', $language['source'], $number) ;?>" target="_blank"><sup>[réf.]</sup></a>
 				    			</p>
@@ -332,7 +332,7 @@
 					    <h3>
 					    	<?php explode_and_echo('**', $diplomaleft['Title'], $number) ;?>
 					    </h3>
-					    <img src="IMG/<?= $diplomaleft['Image'] ;?>">
+					    <img src="IMG/<?= $diplomaleft['image'] ;?>">
 					    <p><?= "« ".$diplomaleft['Description']. " »";?>
 					    <a href="<?= $diplomaleft['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
 					    </p>
@@ -357,7 +357,7 @@
 					    <h3>
 					    	<?php explode_and_echo('**', $diplomaright['Title'], $number) ;?>
 					    </h3>
-					    <img src="IMG/<?= $diplomaright['Image'] ;?>">
+					    <img src="IMG/<?= $diplomaright['image'] ;?>">
 					    <p><?= "« ".$diplomaright['Description']." »" ;?>
 					    <a href="<?= $diplomaright['reference'] ;?>" target="_blank"><sup>[réf.]</sup></a>
 					    </p>
