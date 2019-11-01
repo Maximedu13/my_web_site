@@ -199,6 +199,8 @@ mysql_close($link);
 	$query->execute();
 	$informatics = $query->fetchAll();
 
+
+
 	$query = $pdo->prepare('
 	SELECT 
 		*
@@ -283,7 +285,8 @@ mysql_close($link);
 	');
 	// Exécution de la requête
 	$query->execute();
-	$social = $query->fetchAll();
+	$socials = $query->fetchAll();
+
 	$query = $pdo->prepare('
 	SELECT 
 		*
