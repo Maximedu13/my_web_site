@@ -186,7 +186,6 @@ mysql_close($link);
 	$maitrises= $query->fetchAll();
 
 
-
 	$query = $pdo->prepare("
 	SELECT 
 		*
